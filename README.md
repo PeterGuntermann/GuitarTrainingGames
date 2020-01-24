@@ -1,4 +1,6 @@
-# nGuitar
+# nGuitarTrainer
+
+⚠ In Progress ⚠
 
 ## Main user story 
 Als Gitarrist möchte ich per Knopfdruck eine Tonart ausgewählt bekommen, damit ich anschließend damit üben kann.
