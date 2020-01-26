@@ -1,20 +1,9 @@
-<header class="header">
-    <h1 class="main-title">nGuitarTrainer</h1>
-</header>
+<app-header title="nGuitarTrainer"></app-header>
 
 <div class="main">
-    <div class="content-box">
-        <span class="label">Root</span>
-        <span class="value">{{ tone.Csharp_Dflat }}</span>
-    </div>
-    <div class="content-box">
-        <span class="label">Mode</span>
-        <span class="value">{{ mode.Phrygian }}</span>
-    </div>
-    <div class="content-box">
-        <span class="label">Starting on</span>
-        <span class="value">1. string</span>
-    </div>
+    <app-content-box label="Root" [value]="tone.Csharp_Dflat"></app-content-box>
+    <app-content-box label="Mode" [value]="mode.Phrygian"></app-content-box>
+    <app-content-box label="Starting on" [value]="'1. string'"></app-content-box>
 </div>
 
 <div class="fill-space"></div>

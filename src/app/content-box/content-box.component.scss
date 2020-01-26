@@ -1,0 +1,18 @@
+.content-box {
+  font-size: 1.25rem;
+  margin: 1rem 1rem 0 1rem;
+  padding: 15px;
+  color: #222222;
+  border-radius: 7px;
+  background-color: #bbbbbb;
+
+  .label {
+    font-size: 1rem;
+    display: block;
+    color: #188a1c;
+  }
+
+  .value {
+    display: block;
+  }
+}
