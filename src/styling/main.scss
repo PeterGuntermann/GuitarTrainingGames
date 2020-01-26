@@ -1,6 +1,5 @@
 /* import relevant SCSS modules */
 
-@import url(fonts.scss);
-@import url(basic.scss);
-
-
+@import "./constants";
+@import "./font";
+@import "./basic";

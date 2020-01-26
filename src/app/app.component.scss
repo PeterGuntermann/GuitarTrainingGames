@@ -1,3 +1,5 @@
+@import "src/styling/constants";
+
 :host {
   display: flex;
   flex-direction: column;
@@ -19,7 +21,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
-    color: #eeeeee;
+    color: $color-white;
     border: none;
     border-radius: 7px;
     background: #188a1c;
