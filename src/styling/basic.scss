@@ -1,6 +1,11 @@
 /* Basic global styling for the app */
 
+:root {
+  font-size: 16px;
+}
+
 body {
   font-family: 'FiraSans', sans-serif;
+  margin: 0;
   background: #555555;
 }
