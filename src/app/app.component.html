@@ -1,15 +1,20 @@
 <app-header title="nGuitarTrainer"></app-header>
 
-<div class="main">
-    <app-content-box label="Root" [value]="tone.Csharp_Dflat"></app-content-box>
-    <app-content-box label="Mode" [value]="mode.Phrygian"></app-content-box>
-    <app-content-box label="Starting on" [value]="'1. string'"></app-content-box>
+<div *ngIf="!rollResult" class="no-roll-result-yet">
+    Click the button below to roll a mode.
 </div>
 
-<app-fretboard [numberOfFrets]="15" [numberOfStrings]="6"></app-fretboard>
+<div *ngIf="rollResult" class="roll-result">
+    <app-content-box label="Root" [value]="rollResult.root"></app-content-box>
+    <app-content-box label="Mode" [value]="rollResult.mode"></app-content-box>
+    <app-content-box label="Starting on" [value]="rollResult.startString +'. string'"></app-content-box>
+</div>
+
+<!--<app-fretboard [numberOfFrets]="15" [numberOfStrings]="6"></app-fretboard>-->
 
 <div class="fill-space"></div>
 
 <footer class="actions">
-    <button class="button">Give me another mode!</button>
+    <button *ngIf="rollResult" class="button reset-button" (click)="reset()">Reset</button>
+    <button class="button roll-button" (click)="roll()">Roll a mode!</button>
 </footer>

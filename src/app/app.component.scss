@@ -6,6 +6,13 @@
   height: 100vh;
 }
 
+.no-roll-result-yet {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: $color-gray;
+}
+
 .fill-space {
   flex-grow: 1;
 }
@@ -13,6 +20,8 @@
 .actions {
   margin: 0 1rem;
   padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
 
   .button {
     font-size: 1.25rem;
@@ -21,9 +30,18 @@
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
-    color: $color-white;
     border: none;
     border-radius: 7px;
-    background: #188a1c;
+
+    &.reset-button {
+      color: $color-white;
+      background: $color-gray;
+      margin-right: 1rem;
+    }
+    &.roll-button {
+      color: $color-white;
+      background: $color-green;
+    }
   }
+
 }
