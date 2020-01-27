@@ -1,7 +1,11 @@
 <app-header title="nGuitarTrainer"></app-header>
 
 <div *ngIf="!rollResult" class="no-roll-result-yet">
-    Click the button below to roll a mode.
+    <ol>
+        <li>Click the button below to roll a mode.</li>
+        <li>Practice the displayed mode.</li>
+        <li>Re-roll to get another mode.</li>
+    </ol>
 </div>
 
 <div *ngIf="rollResult" class="roll-result">
