@@ -5,9 +5,9 @@
 </div>
 
 <div *ngIf="rollResult" class="roll-result">
-    <app-content-box label="Root" [value]="rollResult.root"></app-content-box>
-    <app-content-box label="Mode" [value]="rollResult.mode"></app-content-box>
-    <app-content-box label="Starting on" [value]="rollResult.startString +'. string'"></app-content-box>
+    <app-content-box label="Root" [value]="rollResult.rootNote"></app-content-box>
+    <app-content-box label="Mode" [value]="rollResult.scale"></app-content-box>
+    <app-content-box label="Starting on" [value]="rollResult.guitarString"></app-content-box>
 </div>
 
 <!--<app-fretboard [numberOfFrets]="15" [numberOfStrings]="6"></app-fretboard>-->

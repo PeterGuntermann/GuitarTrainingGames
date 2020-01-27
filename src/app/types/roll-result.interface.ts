@@ -1,8 +1,9 @@
-import { Mode } from "./mode.enum";
-import { Tone } from "./tone.enum";
+import { GuitarString } from "./guitar-string.enum";
+import { Scale } from "./scale.enum";
+import { Note }  from "./note.enum";
 
 export interface RollResult {
-    root: Tone;
-    mode: Mode;
-    startString: number;
+    rootNote: Note;
+    scale: Scale;
+    guitarString: GuitarString;
 }

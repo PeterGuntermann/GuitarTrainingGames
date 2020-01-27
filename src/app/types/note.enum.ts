@@ -1,4 +1,4 @@
-export enum Tone {
+export enum Note {
     C = "C",
     Csharp_Dflat = "C♯/D♭",
     D = "D",
