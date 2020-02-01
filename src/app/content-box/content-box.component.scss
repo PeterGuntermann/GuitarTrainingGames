@@ -2,12 +2,16 @@
 
 .content-box {
   font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
   margin: 1rem 1rem 0 1rem;
   padding: 1rem;
   color: $color-black;
   border-radius: 0.5rem;
   background-color: $color-white;
+}
 
+.left {
   .label {
     font-size: 1rem;
     display: block;
@@ -17,4 +21,15 @@
   .value {
     display: block;
   }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }

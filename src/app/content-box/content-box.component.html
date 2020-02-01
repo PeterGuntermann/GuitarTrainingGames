@@ -1,4 +1,12 @@
 <div class="content-box">
-    <span class="label">{{label}}</span>
-    <span class="value">{{value}}</span>
+
+    <div class="left">
+        <span class="label">{{label}}</span>
+        <span class="value">{{value}}</span>
+    </div>
+
+    <div class="right">
+        <fa-icon *ngIf="label === 'Mode'" class="info" [icon]="faInfoCircle"></fa-icon>
+    </div>
+
 </div>
