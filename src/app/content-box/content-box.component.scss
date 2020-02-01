@@ -28,7 +28,16 @@
   align-items: center;
 }
 
-.info {
+.info-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: $color-black;
+}
+
+.info-icon {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
