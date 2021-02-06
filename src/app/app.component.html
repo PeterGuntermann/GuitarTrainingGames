@@ -1,22 +1,23 @@
 <app-header title="nGuitarTrainer"></app-header>
 
 <div *ngIf="!rollResult" class="no-roll-result-yet">
-    <p>1. Click the button below to roll a mode.</p>
-    <p>2. Practice the displayed mode.</p>
-    <p>3. Re-roll to get another mode.</p>
+  <p>1. Click the button below to roll a mode.</p>
+  <p>2. Practice the displayed mode.</p>
+  <p>3. Re-roll to get another mode.</p>
 </div>
 
 <div *ngIf="rollResult" class="roll-result">
-    <app-content-box label="Root" [value]="rollResult.rootNote"></app-content-box>
-    <app-content-box label="Mode" [value]="rollResult.scale"></app-content-box>
-    <app-content-box label="Starting on" [value]="rollResult.guitarString"></app-content-box>
+  <app-content-box label="Root" [value]="rollResult.rootNote"></app-content-box>
+  <app-content-box label="Mode" [value]="rollResult.scale"></app-content-box>
+  <app-content-box label="Starting on" [value]="rollResult.guitarString"></app-content-box>
 </div>
 
-<!--<app-fretboard [numberOfFrets]="15" [numberOfStrings]="6"></app-fretboard>-->
+<app-fretboard [numberOfFrets]="15" [numberOfStrings]="6"></app-fretboard>
 
 <div class="fill-space"></div>
 
+
 <footer class="actions">
-    <button *ngIf="rollResult" class="button reset-button" (click)="reset()">Reset</button>
-    <button class="button roll-button" (click)="roll()">Roll a mode!</button>
+  <button *ngIf="rollResult" class="button reset-button" (click)="reset()">Reset</button>
+  <button class="button roll-button" (click)="roll()">Roll a mode!</button>
 </footer>

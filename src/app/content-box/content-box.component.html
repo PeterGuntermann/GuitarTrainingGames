@@ -1,23 +1,23 @@
 <div class="content-box">
 
-    <div class="left">
-        <span class="label">{{label}}</span>
-        <span class="value">{{value}}</span>
-    </div>
+  <div class="left">
+    <span class="label">{{label}}</span>
+    <span class="value">{{value}}</span>
+  </div>
 
-    <div class="right">
-        <a *ngIf="label === 'Mode'"
-           class="info-link" href="https://en.wikipedia.org/wiki/Mode_(music)" target="_blank">
-            <fa-icon class="info-icon" [icon]="faInfoCircle"></fa-icon>
-        </a>
-        <a *ngIf="label === 'Root'"
-           class="info-link" href="https://en.wikipedia.org/wiki/Root_(chord)" target="_blank">
-            <fa-icon class="info-icon" [icon]="faInfoCircle"></fa-icon>
-        </a>
-        <a *ngIf="label === 'Starting on'"
-           class="info-link" href="https://en.wikipedia.org/wiki/Standard_tuning#Guitar_family" target="_blank">
-            <fa-icon class="info-icon" [icon]="faInfoCircle"></fa-icon>
-        </a>
-    </div>
+  <div class="right">
+    <a *ngIf="label === 'Mode'"
+       class="info-link" href="https://en.wikipedia.org/wiki/Mode_(music)" target="_blank">
+      <fa-icon class="info-icon" [icon]="faInfoCircle"></fa-icon>
+    </a>
+    <a *ngIf="label === 'Root'"
+       class="info-link" href="https://en.wikipedia.org/wiki/Root_(chord)" target="_blank">
+      <fa-icon class="info-icon" [icon]="faInfoCircle"></fa-icon>
+    </a>
+    <a *ngIf="label === 'Starting on'"
+       class="info-link" href="https://en.wikipedia.org/wiki/Standard_tuning#Guitar_family" target="_blank">
+      <fa-icon class="info-icon" [icon]="faInfoCircle"></fa-icon>
+    </a>
+  </div>
 
 </div>
