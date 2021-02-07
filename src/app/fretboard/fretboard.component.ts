@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from "@angular/core";
 export class FretboardComponent implements OnInit {
     @Input() numberOfStrings = 6;
     @Input() numberOfFrets = 15;
+
     guitarStrings: number[];
     frets: number[];
     fretboardLabels: string[];
