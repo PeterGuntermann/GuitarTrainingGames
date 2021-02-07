@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-    selector: "app-fretboard",
+    selector: "shared-fretboard",
     templateUrl: "./fretboard.component.html",
     styleUrls: ["./fretboard.component.scss"],
 })
