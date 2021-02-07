@@ -1,3 +1,17 @@
-<header class="header">
-    <h1 class="main-title">{{ title }}</h1>
-</header>
+<h1 class="main-title">{{ title }}</h1>
+
+<button class="menu-toggle">
+    <fa-icon
+        *ngIf="isMenuOpened"
+        class="info-icon"
+        [icon]="faEllipsisH"
+        (click)="toogleMenu()"
+    ></fa-icon>
+
+    <fa-icon
+        *ngIf="!isMenuOpened"
+        class="info-icon"
+        [icon]="faEllipsisV"
+        (click)="toogleMenu()"
+    ></fa-icon>
+</button>
