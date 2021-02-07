@@ -1,5 +1,14 @@
 <lobby-header [title]="'GuitarTrainingGames'"></lobby-header>
 
-<h2>Lobby</h2>
+<section class="rooms">
+    <button *ngFor="let room of rooms" (click)="selectRoom(room.name)">
+        {{ room.name }}
+    </button>
+</section>
 
-<p>layout works!</p>
+<section class="content">
+    <shared-content-box
+        [label]="currentRoom.name"
+        [value]="currentRoom.description"
+    ></shared-content-box>
+</section>
