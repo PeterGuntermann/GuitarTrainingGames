@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { HeaderComponent } from "./header.component";
+import { LobbyHeaderComponent } from "./lobby-header.component";
 
 describe("HeaderComponent", () => {
-    let component: HeaderComponent;
-    let fixture: ComponentFixture<HeaderComponent>;
+    let component: LobbyHeaderComponent;
+    let fixture: ComponentFixture<LobbyHeaderComponent>;
 
     beforeEach(
         waitForAsync(() => {
             TestBed.configureTestingModule({
-                declarations: [HeaderComponent],
+                declarations: [LobbyHeaderComponent],
             }).compileComponents();
         })
     );
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HeaderComponent);
+        fixture = TestBed.createComponent(LobbyHeaderComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
