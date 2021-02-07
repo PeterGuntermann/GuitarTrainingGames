@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
-import { GuitarString } from "./types/guitar-string.enum";
-import { Note } from "./types/note.enum";
-import { RollResult } from "./types/roll-result.interface";
-import { Scale } from "./types/scale.enum";
+import { GuitarString } from "./models/enums/guitar-string.enum";
+import { Note } from "./models/enums/note.enum";
+import { Scale } from "./models/enums/scale.enum";
+import { RollResult } from "./models/interfaces/roll-result.interface";
 
 @Component({
     selector: "app-root",
