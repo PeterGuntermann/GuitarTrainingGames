@@ -1,13 +1,13 @@
-import { Component }    from '@angular/core';
+import { Component } from "@angular/core";
 import { GuitarString } from "./types/guitar-string.enum";
-import { Note }         from "./types/note.enum";
-import { RollResult }   from "./types/roll-result.interface";
-import { Scale }        from "./types/scale.enum";
+import { Note } from "./types/note.enum";
+import { RollResult } from "./types/roll-result.interface";
+import { Scale } from "./types/scale.enum";
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
+    selector: "app-root",
+    templateUrl: "./app.component.html",
+    styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
     rollResult: RollResult;
@@ -43,6 +43,6 @@ export class AppComponent {
     }
 
     private randomInteger(from: number, to: number) {
-        return Math.floor((Math.random() * (to + 1)) + from);
+        return Math.floor(Math.random() * (to + 1) + from);
     }
 }

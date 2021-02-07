@@ -1,12 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'app-fretboard',
-    templateUrl: './fretboard.component.html',
-    styleUrls: ['./fretboard.component.scss'],
+    selector: "app-fretboard",
+    templateUrl: "./fretboard.component.html",
+    styleUrls: ["./fretboard.component.scss"],
 })
 export class FretboardComponent implements OnInit {
-
     @Input() numberOfStrings = 6;
     @Input() numberOfFrets = 15;
     guitarStrings: number[];
@@ -14,7 +13,9 @@ export class FretboardComponent implements OnInit {
     fretboardLabels: string[];
 
     ngOnInit() {
-        this.guitarStrings = [...Array(this.numberOfStrings).keys()].map(f => f + 1).reverse();
+        this.guitarStrings = [...Array(this.numberOfStrings).keys()]
+            .map(f => f + 1)
+            .reverse();
         this.frets = [...Array(this.numberOfFrets).keys()].map(f => f + 1);
         this.fretboardLabels = this.getFretboardLabels();
     }
@@ -23,23 +24,23 @@ export class FretboardComponent implements OnInit {
         return this.frets.map(fret => {
             switch (fret) {
                 case 3:
-                    return 'III';
+                    return "III";
                 case 5:
-                    return 'V';
+                    return "V";
                 case 7:
-                    return 'VII';
+                    return "VII";
                 case 9:
-                    return 'IX';
+                    return "IX";
                 case 12:
-                    return 'XII';
+                    return "XII";
                 case 15:
-                    return 'XV';
+                    return "XV";
                 case 17:
-                    return 'XVII';
+                    return "XVII";
                 case 19:
-                    return 'IXX';
+                    return "IXX";
                 default:
-                    return '';
+                    return "";
             }
         });
     }

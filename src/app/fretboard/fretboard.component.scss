@@ -1,19 +1,19 @@
 @import "src/styling/constants";
 
 .fretboard {
-  margin: 1rem 1rem 0 1rem;
-  border-left: 5px solid $color-black;
-  background: $color-brown;
+    margin: 1rem 1rem 0 1rem;
+    border-left: 5px solid $color-black;
+    background: $color-brown;
 }
 
 .fret-numbers,
 .guitar-string {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
 .fret {
-  width: 50px;
-  text-align: center;
+    width: 50px;
+    text-align: center;
 }

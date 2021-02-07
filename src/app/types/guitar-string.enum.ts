@@ -5,5 +5,5 @@ export enum GuitarString {
     D = "D string",
     G = "G string",
     higherB = "higher B string",
-    higherE = "higher E string"
+    higherE = "higher E string",
 }

@@ -1,14 +1,14 @@
 @import "src/styling/constants";
 
 .header {
-  padding: 1rem 0;
-  background: $color-black;
+    padding: 1rem 0;
+    background: $color-black;
 
-  .main-title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin: 0;
-    text-align: center;
-    color: $color-white;
-  }
+    .main-title {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin: 0;
+        text-align: center;
+        color: $color-white;
+    }
 }

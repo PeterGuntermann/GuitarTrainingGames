@@ -10,5 +10,5 @@ export enum Note {
     Gsharp_Aflat = "G♯/A♭",
     A = "A",
     Asharp_Bflat = "A♯/B♭",
-    B = "B"
+    B = "B",
 }
