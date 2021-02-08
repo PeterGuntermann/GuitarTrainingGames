@@ -6,6 +6,7 @@ import { LobbyLayoutComponent } from "./lobby/lobby-layout/lobby-layout.componen
 import { LobbyModule } from "./lobby/lobby.module";
 import { RoomLayoutComponent } from "./room/room-layout/room-layout.component";
 import { RoomModule } from "./room/room.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 const routes: Routes = [
     { path: "lobby", component: LobbyLayoutComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
         LobbyModule,
         RoomModule,
         RouterModule.forRoot(routes),
+        BrowserAnimationsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
