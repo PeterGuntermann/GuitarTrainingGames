@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { faEllipsisH, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { IconService } from "../../shared/icon-service/icon.service";
 
 @Component({
     selector: "lobby-header",
@@ -13,6 +14,8 @@ export class LobbyHeaderComponent implements OnInit {
     public isMenuOpened = false;
 
     @Input() title: string;
+
+    constructor(public readonly icon: IconService) {}
 
     ngOnInit() {}
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { IconService } from "../icon-service/icon.service";
 
 @Component({
     selector: "shared-content-box",
@@ -7,10 +7,10 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
     styleUrls: ["./content-box.component.scss"],
 })
 export class ContentBoxComponent implements OnInit {
-    readonly faInfoCircle = faInfoCircle;
-
     @Input() label: string;
     @Input() value: string;
 
     ngOnInit() {}
+
+    constructor(public readonly icon: IconService) {}
 }

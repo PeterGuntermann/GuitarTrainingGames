@@ -2,16 +2,14 @@
 
 <button class="menu-toggle">
     <fa-icon
-        *ngIf="isMenuOpened"
-        class="info-icon"
-        [icon]="faEllipsisH"
+        *ngIf="!isMenuOpened"
+        [icon]="icon.dotsVertical"
         (click)="toogleMenu()"
     ></fa-icon>
 
     <fa-icon
-        *ngIf="!isMenuOpened"
-        class="info-icon"
-        [icon]="faEllipsisV"
+        *ngIf="isMenuOpened"
+        [icon]="icon.dotsHorizontal"
         (click)="toogleMenu()"
     ></fa-icon>
 </button>
