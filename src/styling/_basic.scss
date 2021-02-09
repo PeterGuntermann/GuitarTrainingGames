@@ -1,3 +1,5 @@
+@import "./constants";
+
 /* Basic global styling for the app */
 
 :root {
@@ -7,4 +9,5 @@
 body {
   margin: 0;
   background: $color-grey;
+  font-family: $font-family;
 }
