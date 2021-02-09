@@ -1,5 +1,7 @@
+@import "src/styling/constants";
+
 .rooms {
-    background: #aaaaaa;
+    background: $color-primary;
     display: flex;
     justify-content: center;
 

@@ -1,10 +1,16 @@
 // colors
+$color-primary-lightest: var(--primary-lightest);
 $color-primary-light: var(--primary-light);
 $color-primary: var(--primary);
 $color-primary-dark: var(--primary-dark);
+$color-primary-darkest: var(--primary-darkest);
+
+$color-accent-lightest: var(--accent-lightest);
+$color-accent-light: var(--accent-light);
+$color-accent: var(--accent);
+$color-accent-dark: var(--accent-dark);
+$color-accent-darkest: var(--accent-darkest);
 
 $color-white: #eeeeee;
+$color-grey: #8f8f8f;
 $color-black: #222222;
-$color-green: #188a1c;
-$color-brown: saddlebrown;
-$color-gray: #999999;

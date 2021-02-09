@@ -1,4 +1,4 @@
-@import "../../../styling/constants";
+@import "src/styling/constants";
 
 .content-box {
     font-size: 1.25rem;
@@ -15,7 +15,7 @@
     .label {
         font-size: 1rem;
         display: block;
-        color: $color-green;
+        color: $color-accent;
     }
 
     .value {

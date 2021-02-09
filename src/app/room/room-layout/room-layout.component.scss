@@ -11,7 +11,7 @@
     margin-top: 1rem;
     padding: 0 1rem;
     text-align: center;
-    color: $color-gray;
+    color: $color-grey;
 }
 
 .fill-space {
@@ -37,12 +37,12 @@
         &.reset-button {
             margin-right: 1rem;
             color: $color-white;
-            background: $color-gray;
+            background: $color-grey;
         }
 
         &.roll-button {
             color: $color-white;
-            background: $color-green;
+            background: $color-accent;
         }
     }
 }
