@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 interface Room {
     name: string;
+    icon: string;
     description: string;
 }
 
@@ -24,14 +25,17 @@ export class LobbyLayoutComponent implements OnInit {
         this.rooms = [];
         this.rooms.push({
             name: "Game: Find Notes",
+            icon: "music_note",
             description: "Find the displayed note on a specific string.",
         });
         this.rooms.push({
             name: "Game: Play Chord",
+            icon: "piano",
             description: "Play the displayed chord in any form.",
         });
         this.rooms.push({
             name: "Game: Play mode scale",
+            icon: "stairs",
             description: "Play the scale that belongs to the displayed mode.",
         });
         this.nameOfCurrentRoom = this.rooms[0].name;
