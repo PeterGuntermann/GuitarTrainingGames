@@ -1,24 +1,3 @@
-@import "src/styling/constants";
-
-:host {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    background: $color-primary-darkest;
-}
-
-.main-title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin: 0;
-    padding: 0.5rem;
-    color: $color-white;
-}
-
-.menu-toggle {
-    color: $color-white;
-    background: transparent;
-    border: none;
-    width: 2.5rem;
-    font-size: 1.5rem;
+.spacer {
+    flex: 1 1 auto;
 }

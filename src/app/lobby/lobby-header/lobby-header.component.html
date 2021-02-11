@@ -1,15 +1,9 @@
-<h1 class="main-title">{{ title }}</h1>
+<mat-toolbar color="primary">
+    <h1 class="app-name">{{ title }}</h1>
 
-<button class="menu-toggle">
-    <fa-icon
-        *ngIf="!isMenuOpened"
-        [icon]="icon.dotsVertical"
-        (click)="toogleMenu()"
-    ></fa-icon>
+    <span class="spacer"></span>
 
-    <fa-icon
-        *ngIf="isMenuOpened"
-        [icon]="icon.dotsHorizontal"
-        (click)="toogleMenu()"
-    ></fa-icon>
-</button>
+    <button mat-icon-button class="toggle-menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
