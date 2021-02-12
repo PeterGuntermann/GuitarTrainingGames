@@ -1,4 +1,4 @@
-# nGuitarTrainer
+# GuitarTrainingGames
 
 ⚠ In Progress ⚠
 
