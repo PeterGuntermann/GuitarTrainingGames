@@ -17,3 +17,5 @@ As a guitarist I want get a mode with a root key by only clicking one button so 
 -   Follow this guide: https://prettier.io/docs/en/webstorm.html#using-prettier-in-webstorm.
 -   Don't forget to install Prettier using `npm install --save-dev --save-exact prettier`.
 -   In "advanced options", uncheck "Auto-save edited files to trigger the watcher".
+
+![Prettier File watcher setting](doc/filewatcher-setting.png)
