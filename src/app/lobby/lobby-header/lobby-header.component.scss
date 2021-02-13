@@ -1,3 +1,10 @@
+@import "src/styling/constants";
+
 .spacer {
     flex: 1 1 auto;
+}
+
+mat-toolbar {
+    background: $color-primary-800;
+    color: $color-white;
 }

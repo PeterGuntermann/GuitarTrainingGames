@@ -1,7 +1,6 @@
 @import "src/styling/constants";
 
 .rooms {
-    background: $color-primary;
     display: flex;
     justify-content: center;
 }
@@ -9,8 +8,13 @@
 .room-carousel-button {
     width: 100%;
     border: 0;
+    border-radius: 0;
     height: 2.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: $color-primary-600;
+
+    &.selected {
+        background: $color-primary-400;
+    }
 }
 
 .room-name {

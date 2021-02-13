@@ -4,7 +4,7 @@
 // Plus imports for other components in your app.
 
 $guitarTrainingGames-typography: mat-typography-config(
-    $font-family: 'FiraSans'
+  $font-family: 'FiraSans'
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -15,8 +15,8 @@ $guitarTrainingGames-typography: mat-typography-config(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$guitarTrainingGames-primary: mat-palette($mat-brown);
-$guitarTrainingGames-accent: mat-palette($mat-teal, A200, A100, A400);
+$guitarTrainingGames-primary: mat-palette($mat-green);
+$guitarTrainingGames-accent: mat-palette($mat-blue-gray, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $guitarTrainingGames-warn: mat-palette($mat-red);
@@ -25,11 +25,11 @@ $guitarTrainingGames-warn: mat-palette($mat-red);
 // theming systems such as "color" or "typography".
 $guitarTrainingGames-theme: mat-light-theme(
     (
-        color: (
-            primary: $guitarTrainingGames-primary,
-            accent: $guitarTrainingGames-accent,
-            warn: $guitarTrainingGames-warn,
-        ),
+      color: (
+        primary: $guitarTrainingGames-primary,
+        accent: $guitarTrainingGames-accent,
+        warn: $guitarTrainingGames-warn,
+      ),
     )
 );
 
@@ -43,15 +43,23 @@ $theme-primary: map-get($guitarTrainingGames-theme, primary);
 $theme-accent: map-get($guitarTrainingGames-theme, accent);
 
 :root {
-    --primary-lightest: #{mat-color($theme-primary, 100)};
-    --primary-light: #{mat-color($theme-primary, 300)};
-    --primary: #{mat-color($theme-primary, 500)};
-    --primary-dark: #{mat-color($theme-primary, 700)};
-    --primary-darkest: #{mat-color($theme-primary, 900)};
+  --primary-100: #{mat-color($theme-primary, 100)};
+  --primary-200: #{mat-color($theme-primary, 200)};
+  --primary-300: #{mat-color($theme-primary, 300)};
+  --primary-400: #{mat-color($theme-primary, 400)};
+  --primary-500: #{mat-color($theme-primary, 500)};
+  --primary-600: #{mat-color($theme-primary, 600)};
+  --primary-700: #{mat-color($theme-primary, 700)};
+  --primary-800: #{mat-color($theme-primary, 800)};
+  --primary-900: #{mat-color($theme-primary, 900)};
 
-    --accent-lightest: #{mat-color($theme-accent, 100)};
-    --accent-light: #{mat-color($theme-accent, 300)};
-    --accent: #{mat-color($theme-accent, 500)};
-    --accent-dark: #{mat-color($theme-accent, 700)};
-    --accent-darkest: #{mat-color($theme-accent, 900)};
+  --accent-100: #{mat-color($theme-accent, 100)};
+  --accent-200: #{mat-color($theme-accent, 200)};
+  --accent-300: #{mat-color($theme-accent, 300)};
+  --accent-400: #{mat-color($theme-accent, 400)};
+  --accent-500: #{mat-color($theme-accent, 500)};
+  --accent-600: #{mat-color($theme-accent, 600)};
+  --accent-700: #{mat-color($theme-accent, 700)};
+  --accent-800: #{mat-color($theme-accent, 800)};
+  --accent-900: #{mat-color($theme-accent, 900)};
 }

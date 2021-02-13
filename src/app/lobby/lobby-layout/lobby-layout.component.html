@@ -3,7 +3,9 @@
 <section class="rooms">
     <button
         class="room-carousel-button"
+        mat-button
         *ngFor="let room of rooms"
+        [ngClass]="{ selected: room.name === nameOfCurrentRoom }"
         (click)="selectRoom(room.name)"
     >
         <mat-icon class="room-icon">{{ room.icon }}</mat-icon>
