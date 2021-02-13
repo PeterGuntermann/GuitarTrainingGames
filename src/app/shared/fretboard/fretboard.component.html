@@ -6,10 +6,12 @@
     <!--    </div>-->
     <div *ngFor="let guitarString of guitarStrings" class="guitar-string">
         <div *ngFor="let fret of frets" class="fret">
-            <!--            S{{ guitarString }}, F{{ fret }}-->
             <div class="above"></div>
             <div class="exact"></div>
             <div class="below"></div>
+            <div class="marker">
+                <div class="circle"></div>
+            </div>
         </div>
     </div>
 </div>

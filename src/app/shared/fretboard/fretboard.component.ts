@@ -1,5 +1,25 @@
 import { Component, Input, OnInit } from "@angular/core";
 
+// TODO: 13.02.2021 Create all the layouts in this style (JSON)
+const dummyLayout: string[] = [
+    "---o-",
+    "-o---",
+    "---o-",
+    "--o--",
+    "o--o-",
+    "----o",
+];
+
+// TODO: 13.02.2021 Create a service that creates those objects
+export interface FretboardChart {
+    guitarStrings: {
+        // emptyStringTone: GuitarString;
+        frets: {
+            hasMarker: boolean;
+        }[];
+    }[];
+}
+
 @Component({
     selector: "shared-fretboard",
     templateUrl: "./fretboard.component.html",
@@ -8,6 +28,24 @@ import { Component, Input, OnInit } from "@angular/core";
 export class FretboardComponent implements OnInit {
     @Input() numberOfStrings = 6;
     @Input() numberOfFrets = 5;
+    @Input() fretboardChart: FretboardChart = {
+        guitarStrings: [
+            {
+                frets: [
+                    { hasMarker: false },
+                    { hasMarker: false },
+                    { hasMarker: true },
+                ],
+            },
+            {
+                frets: [
+                    { hasMarker: false },
+                    { hasMarker: true },
+                    { hasMarker: false },
+                ],
+            },
+        ],
+    };
 
     guitarStrings: number[];
     frets: number[];
