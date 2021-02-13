@@ -18,4 +18,11 @@ As a guitarist I want get a mode with a root key by only clicking one button so 
 -   Don't forget to install Prettier using `npm install --save-dev --save-exact prettier`.
 -   In "advanced options", uncheck "Auto-save edited files to trigger the watcher".
 
+Prettier File Watcher:
 ![Prettier File watcher setting](doc/filewatcher-setting.png)
+
+Prettier settings:
+![Prettier Settings](doc/prettier-settings.png)
+
+Save Actions Plugin:
+![Save Actions Settings](doc/save-actions-settings.png)
