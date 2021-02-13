@@ -1,6 +1,20 @@
+@import "~@angular/material/theming";
 @import "src/styling/constants";
 
+.lobby-header {
+    @include mat-elevation(3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+$header-height: 56px;
+
 .rooms {
+    @include mat-elevation(3);
+    margin-top: $header-height;
     display: flex;
     justify-content: center;
 }
@@ -9,7 +23,7 @@
     width: 100%;
     border: 0;
     border-radius: 0;
-    height: 2.5rem;
+    height: $header-height;
     background: $color-primary-600;
 
     &.selected {
