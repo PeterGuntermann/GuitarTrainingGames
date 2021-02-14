@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { FretboardChart } from "./fretboard-chart";
 import { fretboardChartDummy } from "./fretboard-chart-dummy";
+import { FretboardChartBuilder } from "./fretboard-chart.builder";
 
 @Component({
     selector: "shared-fretboard",
@@ -8,13 +9,17 @@ import { fretboardChartDummy } from "./fretboard-chart-dummy";
     styleUrls: ["./fretboard.component.scss"],
 })
 export class FretboardComponent implements OnInit {
-    @Input() numberOfStrings = 6;
-    @Input() numberOfFrets = 5;
     @Input() fretboardChart: FretboardChart = fretboardChartDummy;
 
     // guitarStrings: number[];
     // frets: number[];
     // fretboardLabels: string[];
+    chart = new FretboardChartBuilder()
+        .a(5)
+        .a(6)
+        .a(8)
+        .E(2)
+        .build();
 
     ngOnInit() {
         // this.guitarStrings = [...Array(this.numberOfStrings).keys()]
