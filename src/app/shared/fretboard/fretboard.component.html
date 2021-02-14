@@ -4,12 +4,15 @@
     <!--            {{ fretNumber }}-->
     <!--        </div>-->
     <!--    </div>-->
-    <div *ngFor="let guitarString of guitarStrings" class="guitar-string">
-        <div *ngFor="let fret of frets" class="fret">
+    <div
+        *ngFor="let guitarString of fretboardChart.guitarStrings"
+        class="guitar-string"
+    >
+        <div *ngFor="let fret of guitarString.frets" class="fret">
             <div class="above"></div>
             <div class="exact"></div>
             <div class="below"></div>
-            <div class="marker">
+            <div *ngIf="fret.hasMarker" class="marker">
                 <div class="circle"></div>
             </div>
         </div>
