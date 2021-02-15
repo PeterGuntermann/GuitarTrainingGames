@@ -1,8 +1,11 @@
 export interface FretboardChart {
-    guitarStrings: {
-        // emptyStringTone: GuitarString;
-        frets: {
-            hasMarker: boolean;
-        }[];
-    }[];
+    guitarStrings: FretboardChartGuitarString[];
+}
+
+export interface FretboardChartGuitarString {
+    frets: FretboardChartFret[];
+}
+
+export interface FretboardChartFret {
+    hasMarker: boolean;
 }

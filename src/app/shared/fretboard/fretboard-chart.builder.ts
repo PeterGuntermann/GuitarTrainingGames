@@ -1,7 +1,28 @@
-import { FretboardChart } from "./fretboard-chart";
+import {
+    FretboardChart,
+    FretboardChartFret,
+    FretboardChartGuitarString,
+} from "./fretboard-chart";
 
 export class FretboardChartBuilder {
-    private fretboardChart: FretboardChart;
+    private readonly fretboardChart: FretboardChart;
+
+    constructor(
+        private readonly numberOfGuitarStrings = 6,
+        private readonly numberOfFrets = 4
+    ) {
+        const initFret: FretboardChartFret = { hasMarker: false };
+        const initFrets: FretboardChartFret[] = Array(numberOfFrets).fill(
+            initFret
+        );
+        const initGuitarString: FretboardChartGuitarString = {
+            frets: initFrets,
+        };
+        const initGuitarStrings: FretboardChartGuitarString[] = Array(
+            numberOfGuitarStrings
+        ).fill(initGuitarString);
+        this.fretboardChart = { guitarStrings: initGuitarStrings };
+    }
 
     e(fret: number) {
         // TODO: 14.02.2021 set marker
