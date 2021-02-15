@@ -1,3 +1,4 @@
+import { GuitarString } from "../../models/guitar-string.enum";
 import {
     FretboardChart,
     FretboardChartFret,
@@ -7,25 +8,48 @@ import {
 export class FretboardChartBuilder {
     private readonly fretboardChart: FretboardChart;
 
-    constructor(
-        private readonly numberOfGuitarStrings = 6,
-        private readonly numberOfFrets = 4
-    ) {
-        const initFret: FretboardChartFret = { hasMarker: false };
-        const initFrets: FretboardChartFret[] = Array(numberOfFrets).fill(
-            initFret
+    constructor(private readonly numberOfFrets = 4) {
+        const initFrets: FretboardChartFret[] = [
+            ...Array(numberOfFrets).keys(),
+        ].map(
+            index =>
+                <FretboardChartFret>{
+                    fretNumber: index + 1,
+                    hasMarker: false,
+                }
         );
-        const initGuitarString: FretboardChartGuitarString = {
-            frets: initFrets,
-        };
-        const initGuitarStrings: FretboardChartGuitarString[] = Array(
-            numberOfGuitarStrings
-        ).fill(initGuitarString);
+        const initGuitarStrings: FretboardChartGuitarString[] = [
+            { tone: GuitarString.higherE, frets: initFrets },
+            { tone: GuitarString.higherB, frets: initFrets },
+            { tone: GuitarString.G, frets: initFrets },
+            { tone: GuitarString.D, frets: initFrets },
+            { tone: GuitarString.A, frets: initFrets },
+            { tone: GuitarString.lowerE, frets: initFrets },
+        ];
         this.fretboardChart = { guitarStrings: initGuitarStrings };
+        console.log(this.fretboardChart);
     }
 
-    e(fret: number) {
+    e(fretNumber: number) {
         // TODO: 14.02.2021 set marker
+        const guitarString = this.fretboardChart.guitarStrings.find(
+            guitarString => guitarString.tone === GuitarString.higherE
+        );
+        const index = guitarString.frets.findIndex(
+            fret => fret.fretNumber === fretNumber
+        );
+        guitarString.frets[index].hasMarker = true;
+        // guitarString.frets.forEach(fret => {
+        //     fret.hasMarker = fret.fretNumber === fretNumber;
+        //     console.log(fret);
+        // });
+
+        // TODO: 15.02.2021 Somehow it sets the marker for ALL guitar strings??!
+        // const fret = this.fretboardChart.guitarStrings
+        //     .find(guitarString => guitarString.tone === GuitarString.higherE)
+        //     ?.frets.find(fret => fret.fretNumber === fretNumber);
+        // if (fret !== undefined) fret.hasMarker = true;
+        console.log(this.fretboardChart);
         return this;
     }
 

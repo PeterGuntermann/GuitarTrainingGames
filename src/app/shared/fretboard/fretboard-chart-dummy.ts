@@ -1,53 +1,60 @@
+import { GuitarString } from "../../models/guitar-string.enum";
 import { FretboardChart } from "./fretboard-chart";
 
 export const fretboardChartDummy: FretboardChart = {
     guitarStrings: [
         {
+            tone: GuitarString.higherE,
             frets: [
-                { hasMarker: false },
-                { hasMarker: false },
-                { hasMarker: true },
-                { hasMarker: false },
+                { fretNumber: 0, hasMarker: false },
+                { fretNumber: 1, hasMarker: false },
+                { fretNumber: 2, hasMarker: true },
+                { fretNumber: 3, hasMarker: false },
             ],
         },
         {
+            tone: GuitarString.higherB,
             frets: [
-                { hasMarker: false },
-                { hasMarker: false },
-                { hasMarker: false },
-                { hasMarker: true },
+                { fretNumber: 0, hasMarker: false },
+                { fretNumber: 1, hasMarker: false },
+                { fretNumber: 2, hasMarker: false },
+                { fretNumber: 3, hasMarker: true },
             ],
         },
         {
+            tone: GuitarString.G,
             frets: [
-                { hasMarker: true },
-                { hasMarker: false },
-                { hasMarker: false },
-                { hasMarker: false },
+                { fretNumber: 0, hasMarker: true },
+                { fretNumber: 1, hasMarker: false },
+                { fretNumber: 2, hasMarker: false },
+                { fretNumber: 3, hasMarker: false },
             ],
         },
         {
+            tone: GuitarString.D,
             frets: [
-                { hasMarker: true },
-                { hasMarker: false },
-                { hasMarker: true },
-                { hasMarker: false },
+                { fretNumber: 0, hasMarker: true },
+                { fretNumber: 1, hasMarker: false },
+                { fretNumber: 2, hasMarker: true },
+                { fretNumber: 3, hasMarker: false },
             ],
         },
         {
+            tone: GuitarString.A,
             frets: [
-                { hasMarker: true },
-                { hasMarker: false },
-                { hasMarker: true },
-                { hasMarker: true },
+                { fretNumber: 0, hasMarker: true },
+                { fretNumber: 1, hasMarker: false },
+                { fretNumber: 2, hasMarker: true },
+                { fretNumber: 3, hasMarker: true },
             ],
         },
         {
+            tone: GuitarString.lowerE,
             frets: [
-                { hasMarker: true },
-                { hasMarker: true },
-                { hasMarker: false },
-                { hasMarker: true },
+                { fretNumber: 0, hasMarker: true },
+                { fretNumber: 1, hasMarker: true },
+                { fretNumber: 2, hasMarker: false },
+                { fretNumber: 3, hasMarker: true },
             ],
         },
     ],
