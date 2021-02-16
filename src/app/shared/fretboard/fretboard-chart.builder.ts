@@ -1,84 +1,106 @@
 import { GuitarString } from "../../models/guitar-string.enum";
 import {
     FretboardChart,
-    FretboardChartFret,
+    FretboardChartEntry,
     FretboardChartGuitarString,
 } from "./fretboard-chart";
 
 export class FretboardChartBuilder {
-    private readonly fretboardChart: FretboardChart;
+    private readonly fretboardChartEntries: FretboardChartEntry[];
 
     constructor(private readonly numberOfFrets = 4) {
-        const initFrets: FretboardChartFret[] = [
-            ...Array(numberOfFrets).keys(),
-        ].map(
-            index =>
-                <FretboardChartFret>{
-                    fretNumber: index + 1,
-                    hasMarker: false,
-                }
-        );
-        const initGuitarStrings: FretboardChartGuitarString[] = [
-            { tone: GuitarString.higherE, frets: initFrets },
-            { tone: GuitarString.higherB, frets: initFrets },
-            { tone: GuitarString.G, frets: initFrets },
-            { tone: GuitarString.D, frets: initFrets },
-            { tone: GuitarString.A, frets: initFrets },
-            { tone: GuitarString.lowerE, frets: initFrets },
+        this.fretboardChartEntries = [
+            new FretboardChartEntry(GuitarString.higherE, 1, false),
+            new FretboardChartEntry(GuitarString.higherE, 2, false),
+            new FretboardChartEntry(GuitarString.higherE, 3, false),
+            new FretboardChartEntry(GuitarString.higherE, 4, false),
+            new FretboardChartEntry(GuitarString.higherB, 1, false),
+            new FretboardChartEntry(GuitarString.higherB, 2, false),
+            new FretboardChartEntry(GuitarString.higherB, 3, false),
+            new FretboardChartEntry(GuitarString.higherB, 4, false),
+            new FretboardChartEntry(GuitarString.G, 1, false),
+            new FretboardChartEntry(GuitarString.G, 2, false),
+            new FretboardChartEntry(GuitarString.G, 3, false),
+            new FretboardChartEntry(GuitarString.G, 4, false),
+            new FretboardChartEntry(GuitarString.D, 1, false),
+            new FretboardChartEntry(GuitarString.D, 2, false),
+            new FretboardChartEntry(GuitarString.D, 3, false),
+            new FretboardChartEntry(GuitarString.D, 4, false),
+            new FretboardChartEntry(GuitarString.A, 1, false),
+            new FretboardChartEntry(GuitarString.A, 2, false),
+            new FretboardChartEntry(GuitarString.A, 3, false),
+            new FretboardChartEntry(GuitarString.A, 4, false),
+            new FretboardChartEntry(GuitarString.lowerE, 1, false),
+            new FretboardChartEntry(GuitarString.lowerE, 2, false),
+            new FretboardChartEntry(GuitarString.lowerE, 3, false),
+            new FretboardChartEntry(GuitarString.lowerE, 4, false),
         ];
-        this.fretboardChart = { guitarStrings: initGuitarStrings };
-        console.log(this.fretboardChart);
+        console.log(this.fretboardChartEntries);
     }
 
     e(fretNumber: number) {
-        // TODO: 14.02.2021 set marker
-        const guitarString = this.fretboardChart.guitarStrings.find(
-            guitarString => guitarString.tone === GuitarString.higherE
-        );
-        const index = guitarString.frets.findIndex(
-            fret => fret.fretNumber === fretNumber
-        );
-        guitarString.frets[index].hasMarker = true;
-        // guitarString.frets.forEach(fret => {
-        //     fret.hasMarker = fret.fretNumber === fretNumber;
-        //     console.log(fret);
-        // });
-
-        // TODO: 15.02.2021 Somehow it sets the marker for ALL guitar strings??!
-        // const fret = this.fretboardChart.guitarStrings
-        //     .find(guitarString => guitarString.tone === GuitarString.higherE)
-        //     ?.frets.find(fret => fret.fretNumber === fretNumber);
-        // if (fret !== undefined) fret.hasMarker = true;
-        console.log(this.fretboardChart);
+        this.setMarker(GuitarString.higherE, fretNumber);
         return this;
     }
 
-    b(fret: number) {
-        // TODO: 14.02.2021 set marker
+    b(fretNumber: number) {
+        this.setMarker(GuitarString.higherB, fretNumber);
         return this;
     }
 
-    g(fret: number) {
-        // TODO: 14.02.2021 set marker
+    g(fretNumber: number) {
+        this.setMarker(GuitarString.G, fretNumber);
         return this;
     }
 
-    d(fret: number) {
-        // TODO: 14.02.2021 set marker
+    d(fretNumber: number) {
+        this.setMarker(GuitarString.D, fretNumber);
         return this;
     }
 
-    a(fret: number) {
-        // TODO: 14.02.2021 set marker
+    a(fretNumber: number) {
+        this.setMarker(GuitarString.A, fretNumber);
         return this;
     }
 
-    E(fret: number) {
-        // TODO: 14.02.2021 set marker
+    E(fretNumber: number) {
+        this.setMarker(GuitarString.lowerE, fretNumber);
         return this;
     }
 
     build() {
-        return this.fretboardChart;
+        const fretsForGuitarString = guitarString =>
+            this.fretboardChartEntries
+                .filter(e => e.guitarString === guitarString)
+                .map(e => {
+                    return {
+                        fretNumber: e.fretNumber,
+                        hasMarker: e.hasMarker,
+                    };
+                });
+        const guitarStringObject = guitarString =>
+            <FretboardChartGuitarString>{
+                tone: guitarString,
+                frets: fretsForGuitarString(guitarString),
+            };
+        const fretboardChart: FretboardChart = {
+            guitarStrings: [
+                guitarStringObject(GuitarString.higherE),
+                guitarStringObject(GuitarString.higherB),
+                guitarStringObject(GuitarString.G),
+                guitarStringObject(GuitarString.D),
+                guitarStringObject(GuitarString.A),
+                guitarStringObject(GuitarString.lowerE),
+            ],
+        };
+        return fretboardChart;
+    }
+
+    private setMarker(guitarString: GuitarString, fretNumber: number) {
+        this.fretboardChartEntries.find(
+            entry =>
+                entry.guitarString === guitarString &&
+                entry.fretNumber === fretNumber
+        ).hasMarker = true;
     }
 }

@@ -14,13 +14,16 @@ export class FretboardComponent implements OnInit {
     // guitarStrings: number[];
     // frets: number[];
     // fretboardLabels: string[];
+
     ngOnInit() {
         this.fretboardChart = new FretboardChartBuilder()
             .e(2)
+            .b(1)
+            .g(4)
+            .d(3)
             .a(1)
-            .a(2)
-            .a(3)
-            .E(2)
+            .E(3)
+            .E(4)
             .build();
 
         // this.guitarStrings = [...Array(this.numberOfStrings).keys()]
