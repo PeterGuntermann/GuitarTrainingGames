@@ -97,6 +97,19 @@ export class FretboardChartBuilder {
     }
 
     private setMarker(guitarString: GuitarString, fretNumber: number) {
+        if (fretNumber < 1) {
+            console.warn(
+                `Ignored fretboard marker: fretNumber = ${fretNumber} < 1.`
+            );
+            return;
+        }
+        if (fretNumber > this.numberOfFrets) {
+            console.warn(
+                `Ignored fretboard marker: fretNumber = ${fretNumber} > ${this.numberOfFrets}.`
+            );
+            return;
+        }
+
         this.fretboardChartEntries.find(
             entry =>
                 entry.guitarString === guitarString &&
