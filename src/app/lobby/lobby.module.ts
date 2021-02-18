@@ -4,6 +4,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { RouterModule } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SharedModule } from "../shared/shared.module";
 import { LobbyHeaderComponent } from "./lobby-header/lobby-header.component";
@@ -19,6 +20,7 @@ import { LobbyLayoutComponent } from "./lobby-layout/lobby-layout.component";
         MatIconModule,
         MatToolbarModule,
         MatCardModule,
+        RouterModule,
     ],
     exports: [LobbyLayoutComponent],
 })

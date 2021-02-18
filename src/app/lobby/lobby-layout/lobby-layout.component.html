@@ -16,7 +16,7 @@
 </section>
 
 <section class="content">
-    <mat-card>
+    <mat-card [routerLink]="idOfCurrentRoom">
         <mat-card-header>
             <mat-card-title>{{ currentRoom.title }}</mat-card-title>
             <mat-card-subtitle>{{ currentRoom.subtitle }}</mat-card-subtitle>
