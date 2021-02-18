@@ -35,7 +35,6 @@ export class FretboardChartBuilder {
             new FretboardChartEntry(GuitarString.lowerE, 3, false),
             new FretboardChartEntry(GuitarString.lowerE, 4, false),
         ];
-        console.log(this.fretboardChartEntries);
     }
 
     e(fretNumber: number) {
