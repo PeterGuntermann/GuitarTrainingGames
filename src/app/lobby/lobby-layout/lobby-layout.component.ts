@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 
 interface Room {
-    name: string;
+    id: string;
+    title: string;
+    subtitle: string;
     icon: string;
     description: string;
 }
@@ -13,35 +15,41 @@ interface Room {
 })
 export class LobbyLayoutComponent implements OnInit {
     public rooms: Room[];
-    public nameOfCurrentRoom: string;
+    public idOfCurrentRoom: string;
 
     constructor() {}
 
     get currentRoom(): Room {
-        return this.rooms.find(room => room.name === this.nameOfCurrentRoom);
+        return this.rooms.find(room => room.id === this.idOfCurrentRoom);
     }
 
     ngOnInit(): void {
         this.rooms = [];
         this.rooms.push({
-            name: "Game: Find Notes",
+            id: "game-notes",
+            title: "Notes",
+            subtitle: "Find the displayed notes.",
             icon: "music_note",
             description: "Find the displayed note on a specific string.",
         });
         this.rooms.push({
-            name: "Game: Play Chord",
+            id: "game-chords",
+            title: "Chords",
+            subtitle: "Play randomly displayed chords.",
             icon: "piano",
             description: "Play the displayed chord in any form.",
         });
         this.rooms.push({
-            name: "Game: Play mode scale",
+            id: "game-scales",
+            title: "Scales",
+            subtitle: "Up and down.",
             icon: "stairs",
             description: "Play the scale that belongs to the displayed mode.",
         });
-        this.nameOfCurrentRoom = this.rooms[0].name;
+        this.idOfCurrentRoom = this.rooms[0].id;
     }
 
-    selectRoom(roomName: string): void {
-        this.nameOfCurrentRoom = roomName;
+    selectRoom(roomId: string): void {
+        this.idOfCurrentRoom = roomId;
     }
 }

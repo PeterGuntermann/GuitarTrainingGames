@@ -7,19 +7,25 @@
         class="room-carousel-button"
         mat-button
         *ngFor="let room of rooms"
-        [ngClass]="{ selected: room.name === nameOfCurrentRoom }"
-        (click)="selectRoom(room.name)"
+        [ngClass]="{ selected: room.id === idOfCurrentRoom }"
+        (click)="selectRoom(room.id)"
     >
         <mat-icon class="room-icon">{{ room.icon }}</mat-icon>
-        <span class="room-name">{{ room.name }}</span>
+        <span class="room-name">{{ room.title }}</span>
     </button>
 </section>
 
 <section class="content">
-    <shared-content-box
-        [label]="currentRoom.name"
-        [value]="currentRoom.description"
-    ></shared-content-box>
-</section>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{ currentRoom.title }}</mat-card-title>
+            <mat-card-subtitle>{{ currentRoom.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
 
-<shared-fretboard></shared-fretboard>
+        <mat-card-content>
+            <p>
+                Detailed description goes here.
+            </p>
+        </mat-card-content>
+    </mat-card>
+</section>

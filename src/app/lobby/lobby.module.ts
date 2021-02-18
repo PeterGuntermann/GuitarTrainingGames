@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -17,6 +18,7 @@ import { LobbyLayoutComponent } from "./lobby-layout/lobby-layout.component";
         MatButtonModule,
         MatIconModule,
         MatToolbarModule,
+        MatCardModule,
     ],
     exports: [LobbyLayoutComponent],
 })
