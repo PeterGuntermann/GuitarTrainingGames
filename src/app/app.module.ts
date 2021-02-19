@@ -39,7 +39,6 @@ import { SharedModule } from "./shared/shared.module";
         MatCardModule,
         MatIconModule,
         MatToolbarModule,
-        RouterModule,
         RouterModule.forRoot(ROUTES),
         SharedModule,
     ],
