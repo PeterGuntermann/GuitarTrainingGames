@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GameScalesRoom } from "../constants/game-rooms";
+import { GAME_SCALES_ROOM } from "../constants/game-rooms";
 
 @Component({
     selector: "app-game-scales",
@@ -7,7 +7,7 @@ import { GameScalesRoom } from "../constants/game-rooms";
     styleUrls: ["./game-scales.component.scss"],
 })
 export class GameScalesComponent implements OnInit {
-    public readonly Room = GameScalesRoom;
+    public readonly Room = GAME_SCALES_ROOM;
 
     constructor() {}
 
