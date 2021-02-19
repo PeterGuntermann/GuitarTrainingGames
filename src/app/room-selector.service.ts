@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { gameRooms } from "./constants/game-rooms";
+import { GameRooms } from "./constants/game-rooms";
 import { Room } from "./models/room.interface";
 
 @Injectable({
@@ -9,11 +9,11 @@ export class RoomSelectorService {
     private _selectedRoom: Room;
 
     constructor() {
-        this._selectedRoom = gameRooms[0];
+        this._selectedRoom = GameRooms[0];
     }
 
     selectRoom(roomId: string): void {
-        const findResult = gameRooms.find(room => room.id === roomId);
+        const findResult = GameRooms.find(room => room.id === roomId);
 
         if (findResult === undefined) {
             console.warn(`Room with id "${roomId}" does not exist.`);
