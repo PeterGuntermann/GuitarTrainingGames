@@ -7,8 +7,8 @@
         class="room-carousel-button"
         mat-button
         *ngFor="let room of rooms"
-        [ngClass]="{ selected: room.id === idOfCurrentRoom }"
-        (click)="selectRoom(room.id)"
+        [ngClass]="{ selected: room.id === roomSelector.selectedRoom.id }"
+        (click)="roomSelector.selectRoom(room.id)"
     >
         <mat-icon class="room-icon">{{ room.icon }}</mat-icon>
         <span class="room-name">{{ room.title }}</span>
@@ -16,10 +16,15 @@
 </section>
 
 <section class="content">
-    <mat-card [routerLink]="idOfCurrentRoom">
+    <mat-card [routerLink]="roomSelector.selectedRoom.id">
         <mat-card-header>
-            <mat-card-title>{{ currentRoom.title }}</mat-card-title>
-            <mat-card-subtitle>{{ currentRoom.subtitle }}</mat-card-subtitle>
+            <mat-card-title>
+                {{ roomSelector.selectedRoom.title }}
+            </mat-card-title>
+
+            <mat-card-subtitle>
+                {{ roomSelector.selectedRoom.subtitle }}
+            </mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>
