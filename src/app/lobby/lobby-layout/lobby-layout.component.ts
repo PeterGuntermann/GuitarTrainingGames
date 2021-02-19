@@ -1,12 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
-interface Room {
-    id: string;
-    title: string;
-    subtitle: string;
-    icon: string;
-    description: string;
-}
+import { gameRooms } from "../../constants/game-rooms";
+import { Room } from "../../models/room.interface";
 
 @Component({
     selector: "app-layout",
@@ -24,28 +18,7 @@ export class LobbyLayoutComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.rooms = [];
-        this.rooms.push({
-            id: "game-notes",
-            title: "Notes",
-            subtitle: "Find the displayed notes.",
-            icon: "music_note",
-            description: "Find the displayed note on a specific string.",
-        });
-        this.rooms.push({
-            id: "game-chords",
-            title: "Chords",
-            subtitle: "Play randomly displayed chords.",
-            icon: "piano",
-            description: "Play the displayed chord in any form.",
-        });
-        this.rooms.push({
-            id: "game-scales",
-            title: "Scales",
-            subtitle: "Up and down.",
-            icon: "stairs",
-            description: "Play the scale that belongs to the displayed mode.",
-        });
+        this.rooms = gameRooms;
         this.idOfCurrentRoom = this.rooms[0].id;
     }
 
