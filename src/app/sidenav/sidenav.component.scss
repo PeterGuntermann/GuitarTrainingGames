@@ -22,7 +22,9 @@
 }
 
 .navigation {
-    //padding: 0;
+    mat-icon {
+        margin-right: 0.5rem;
+    }
 }
 
 .spacer {
@@ -32,5 +34,5 @@
 .version-info {
     padding: 1rem;
     text-align: center;
-    color: $color-grey-dark;
+    color: $color-grey;
 }
