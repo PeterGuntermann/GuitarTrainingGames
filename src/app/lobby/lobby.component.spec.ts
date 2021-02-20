@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { LobbyLayoutComponent } from "./lobby-layout.component";
+import { LobbyComponent } from "./lobby.component";
 
 describe("LayoutComponent", () => {
-    let component: LobbyLayoutComponent;
-    let fixture: ComponentFixture<LobbyLayoutComponent>;
+    let component: LobbyComponent;
+    let fixture: ComponentFixture<LobbyComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [LobbyLayoutComponent],
+            declarations: [LobbyComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(LobbyLayoutComponent);
+        fixture = TestBed.createComponent(LobbyComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -14,7 +14,7 @@ import { GameChordsComponent } from "./game-chords/game-chords.component";
 import { GameNotesComponent } from "./game-notes/game-notes.component";
 import { GameScalesComponent } from "./game-scales/game-scales.component";
 import { LobbyHeaderComponent } from "./lobby/lobby-header/lobby-header.component";
-import { LobbyLayoutComponent } from "./lobby/lobby-layout/lobby-layout.component";
+import { LobbyComponent } from "./lobby/lobby.component";
 import { RoomHeaderComponent } from "./room/room-header/room-header.component";
 import { RoomLayoutComponent } from "./room/room-layout/room-layout.component";
 import { SharedModule } from "./shared/shared.module";
@@ -26,7 +26,7 @@ import { SharedModule } from "./shared/shared.module";
         GameNotesComponent,
         GameScalesComponent,
         LobbyHeaderComponent,
-        LobbyLayoutComponent,
+        LobbyComponent,
         RoomHeaderComponent,
         RoomLayoutComponent,
     ],
