@@ -1,6 +1,11 @@
 @import "../../../node_modules/@angular/material/theming";
 @import "../../styling/constants";
 
+.container {
+    background-color: transparent;
+    height: 100vh;
+}
+
 .lobby-header {
     @include mat-elevation(3);
     position: fixed;

@@ -3,11 +3,11 @@ import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
+import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AppComponent } from "./app.component";
 import { ROUTES } from "./constants/routes";
 import { GameChordsComponent } from "./game-chords/game-chords.component";
@@ -34,10 +34,10 @@ import { SharedModule } from "./shared/shared.module";
         BrowserAnimationsModule,
         BrowserModule,
         CommonModule,
-        FontAwesomeModule,
         MatButtonModule,
         MatCardModule,
         MatIconModule,
+        MatSidenavModule,
         MatToolbarModule,
         RouterModule.forRoot(ROUTES),
         SharedModule,

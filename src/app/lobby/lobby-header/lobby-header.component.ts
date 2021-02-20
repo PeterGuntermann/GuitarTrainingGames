@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { faEllipsisH, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { IconService } from "../../shared/icon-service/icon.service";
 
 @Component({
@@ -8,18 +7,15 @@ import { IconService } from "../../shared/icon-service/icon.service";
     styleUrls: ["./lobby-header.component.scss"],
 })
 export class LobbyHeaderComponent implements OnInit {
-    readonly faEllipsisV = faEllipsisV;
-    readonly faEllipsisH = faEllipsisH;
-
-    public isMenuOpened = false;
-
     @Input() title: string;
+
+    @Output() toggleMenuButtonClicked = new EventEmitter();
 
     constructor(public readonly icon: IconService) {}
 
     ngOnInit() {}
 
-    toogleMenu(): void {
-        this.isMenuOpened = !this.isMenuOpened;
+    onToggleMenuButtonClick(): void {
+        this.toggleMenuButtonClicked.emit();
     }
 }
