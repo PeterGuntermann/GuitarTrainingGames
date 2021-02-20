@@ -3,10 +3,31 @@
 </div>
 
 <mat-nav-list class="navigation">
-    <mat-list-item>Game: Notes</mat-list-item>
-    <mat-list-item>Game: Chords</mat-list-item>
-    <mat-list-item>Game: Scales</mat-list-item>
-    <mat-list-item>About</mat-list-item>
+    <div mat-subheader>Games</div>
+
+    <mat-list-item>
+        <mat-icon>{{ GAME_NOTES_ROOM.icon }}</mat-icon>
+        <span>{{ GAME_NOTES_ROOM.title }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+        <mat-icon>{{ GAME_CHORDS_ROOM.icon }}</mat-icon>
+        <span>{{ GAME_CHORDS_ROOM.title }}</span>
+    </mat-list-item>
+
+    <mat-list-item>
+        <mat-icon>{{ GAME_SCALES_ROOM.icon }}</mat-icon>
+        <div>{{ GAME_SCALES_ROOM.title }}</div>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <div mat-subheader>App</div>
+
+    <mat-list-item>Settings</mat-list-item>
+
+    <mat-list-item>About the app</mat-list-item>
+
     <mat-list-item>Release History</mat-list-item>
 </mat-nav-list>
 
