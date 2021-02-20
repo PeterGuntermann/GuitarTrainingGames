@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import {
     GAME_CHORDS_ROOM,
     GAME_NOTES_ROOM,
+    GAME_ROOMS,
     GAME_SCALES_ROOM,
 } from "../constants/game-rooms";
 import { APP_NAME, APP_VERSION } from "../constants/globals";
@@ -15,6 +16,7 @@ export class SidenavComponent implements OnInit {
     readonly GAME_CHORDS_ROOM = GAME_CHORDS_ROOM;
     readonly GAME_NOTES_ROOM = GAME_NOTES_ROOM;
     readonly GAME_SCALES_ROOM = GAME_SCALES_ROOM;
+    readonly GAME_ROOMS = GAME_ROOMS;
     readonly VERSION_INFO = `${APP_NAME} v${APP_VERSION}`;
 
     ngOnInit(): void {}
