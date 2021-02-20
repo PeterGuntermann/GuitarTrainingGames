@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { BrowserModule } from "@angular/platform-browser";
@@ -18,6 +19,7 @@ import { LobbyComponent } from "./lobby/lobby.component";
 import { RoomHeaderComponent } from "./room/room-header/room-header.component";
 import { RoomLayoutComponent } from "./room/room-layout/room-layout.component";
 import { SharedModule } from "./shared/shared.module";
+import { SidenavComponent } from "./sidenav/sidenav.component";
 
 @NgModule({
     declarations: [
@@ -29,6 +31,7 @@ import { SharedModule } from "./shared/shared.module";
         LobbyComponent,
         RoomHeaderComponent,
         RoomLayoutComponent,
+        SidenavComponent,
     ],
     imports: [
         BrowserAnimationsModule,
@@ -37,6 +40,7 @@ import { SharedModule } from "./shared/shared.module";
         MatButtonModule,
         MatCardModule,
         MatIconModule,
+        MatListModule,
         MatSidenavModule,
         MatToolbarModule,
         RouterModule.forRoot(ROUTES),
