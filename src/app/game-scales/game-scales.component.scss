@@ -1,0 +1,14 @@
+@import "../../styling/constants";
+
+.roll-result {
+    margin: 1rem;
+}
+
+.roll-button {
+    padding: 1rem;
+
+    & > button {
+        width: 100%;
+        height: 5rem;
+    }
+}

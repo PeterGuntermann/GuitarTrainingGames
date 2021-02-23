@@ -1,5 +1,4 @@
 export enum GuitarString {
-    lowerB = "lower B string",
     lowerE = "lower E string",
     A = "A string",
     D = "D string",

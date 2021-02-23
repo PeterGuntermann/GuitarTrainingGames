@@ -1,3 +1,34 @@
-<room-header [roomTitle]="Room.title"></room-header>
+<room-header [roomTitle]="ROOM.title"></room-header>
 
-<p>game-scales works!</p>
+<mat-card class="roll-result">
+    <mat-form-field class="root">
+        <mat-label>Root</mat-label>
+        <input matInput type="text" [value]="rollResult?.rootNote" />
+    </mat-form-field>
+
+    <mat-form-field class="mode">
+        <mat-label>Mode</mat-label>
+        <input matInput type="text" [value]="rollResult?.scale" />
+    </mat-form-field>
+
+    <mat-form-field class="starting-on">
+        <mat-label>Starting on</mat-label>
+        <input matInput type="text" [value]="rollResult?.guitarString" />
+    </mat-form-field>
+</mat-card>
+
+<div class="roll-button">
+    <button mat-raised-button color="primary" (click)="roll()">
+        <mat-icon>skip_next</mat-icon>
+    </button>
+</div>
+
+<shared-fretboard></shared-fretboard>
+
+<!--
+<div *ngIf="!rollResult" class="no-roll-result-yet">
+    <p>1. Click the button below to roll a mode.</p>
+    <p>2. Practice the displayed mode.</p>
+    <p>3. Re-roll to get another mode.</p>
+</div>
+-->

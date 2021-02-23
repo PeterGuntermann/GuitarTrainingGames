@@ -7,14 +7,8 @@
 </div>
 
 <div *ngIf="rollResult" class="roll-result">
-    <shared-content-box
-        label="Root"
-        [value]="rollResult.rootNote"
-    ></shared-content-box>
-    <shared-content-box
-        label="Mode"
-        [value]="rollResult.scale"
-    ></shared-content-box>
+    <shared-content-box label="Root" [value]="rollResult.rootNote"></shared-content-box>
+    <shared-content-box label="Mode" [value]="rollResult.scale"></shared-content-box>
     <shared-content-box
         label="Starting on"
         [value]="rollResult.guitarString"
@@ -29,5 +23,5 @@
     <button *ngIf="rollResult" class="button reset-button" (click)="reset()">
         Reset
     </button>
-    <button class="button roll-button" (click)="roll()">Roll a mode!</button>
+    <!--    <button class="button roll-button" (click)="roll()">Roll a mode!</button>-->
 </footer>

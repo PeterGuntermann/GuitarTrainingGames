@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { GAME_SCALES_ROOM } from "../constants/game-rooms";
+import { RollResult } from "../models/roll-result.interface";
+import { RandomGeneratorService } from "../random-generator.service";
 
 @Component({
     selector: "app-game-scales",
@@ -7,9 +9,19 @@ import { GAME_SCALES_ROOM } from "../constants/game-rooms";
     styleUrls: ["./game-scales.component.scss"],
 })
 export class GameScalesComponent implements OnInit {
-    public readonly Room = GAME_SCALES_ROOM;
+    readonly ROOM = GAME_SCALES_ROOM;
 
-    constructor() {}
+    rollResult: RollResult;
+
+    constructor(readonly randomGenerator: RandomGeneratorService) {}
 
     ngOnInit(): void {}
+
+    roll() {
+        this.rollResult = {
+            rootNote: this.randomGenerator.randomNote(),
+            scale: this.randomGenerator.randomScale(),
+            guitarString: this.randomGenerator.randomGuitarString(),
+        };
+    }
 }
