@@ -20,6 +20,7 @@ import { RoomHeaderComponent } from "./room/room-header/room-header.component";
 import { RoomLayoutComponent } from "./room/room-layout/room-layout.component";
 import { SharedModule } from "./shared/shared.module";
 import { SidenavComponent } from "./sidenav/sidenav.component";
+import { RoomCarouselComponent } from "./room-carousel/room-carousel.component";
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
         RoomHeaderComponent,
         RoomLayoutComponent,
         SidenavComponent,
+        RoomCarouselComponent,
     ],
     imports: [
         BrowserAnimationsModule,

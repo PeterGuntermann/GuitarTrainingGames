@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_ROOMS } from "../constants/game-rooms";
 import { APP_NAME } from "../constants/globals";
-import { RoomSelectorService } from "../room-selector.service";
 
 @Component({
     selector: "app-layout",
@@ -10,9 +8,8 @@ import { RoomSelectorService } from "../room-selector.service";
 })
 export class LobbyComponent implements OnInit {
     readonly APP_NAME = APP_NAME;
-    readonly ROOMS = GAME_ROOMS;
 
-    constructor(public readonly roomSelector: RoomSelectorService) {}
+    constructor() {}
 
     ngOnInit(): void {}
 }
