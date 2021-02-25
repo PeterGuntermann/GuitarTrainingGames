@@ -21,9 +21,15 @@ export class RandomGeneratorService {
         return Scale[enumKeys[randomInteger]];
     }
 
-    public randomGuitarString(): GuitarString {
+    public randomGuitarStringForScales(): GuitarString {
         const enumKeys = Object.keys(GuitarString);
-        const randomInteger = this.randomInteger(0, 4);
+        const randomInteger = this.randomInteger(0, 3);
+        return GuitarString[enumKeys[randomInteger]];
+    }
+
+    public randomGuitarStringForNotes(): GuitarString {
+        const enumKeys = Object.keys(GuitarString);
+        const randomInteger = this.randomInteger(0, 5);
         return GuitarString[enumKeys[randomInteger]];
     }
 

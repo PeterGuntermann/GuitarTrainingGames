@@ -18,7 +18,7 @@ import { GameScalesComponent } from "./game-scales/game-scales.component";
 import { LobbyHeaderComponent } from "./lobby/lobby-header/lobby-header.component";
 import { LobbyComponent } from "./lobby/lobby.component";
 import { RoomCarouselComponent } from "./room-carousel/room-carousel.component";
-import { RoomHeaderComponent } from "./room/room-header/room-header.component";
+import { RoomHeaderComponent } from "./room-header/room-header.component";
 import { SharedModule } from "./shared/shared.module";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 
