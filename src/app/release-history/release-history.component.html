@@ -1,0 +1,10 @@
+<h1>Release history</h1>
+
+<mat-card *ngFor="let version of versions">
+    <h2>{{ version.versionNumber }}</h2>
+    <ul>
+        <li *ngFor="let feature of version.features">
+            {{ feature }}
+        </li>
+    </ul>
+</mat-card>
