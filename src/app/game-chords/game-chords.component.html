@@ -1,3 +1,37 @@
-<room-header [roomTitle]="Room.title"></room-header>
+<room-header [roomTitle]="ROOM.title"></room-header>
 
-<p>game-chords works!</p>
+<mat-card class="explanation">
+    <h2>How to play</h2>
+    <ul>
+        <li>Click the button below to roll a random chord.</li>
+        <li>Find at least one way to play that chord.</li>
+        <li>Re-roll to get another chord.</li>
+    </ul>
+</mat-card>
+
+<mat-card class="roll-result">
+    <h2>Result</h2>
+
+    <div class="wrapper">
+        <mat-form-field class="root">
+            <mat-label>Root note</mat-label>
+            <input
+                matInput
+                type="text"
+                [readonly]="true"
+                [value]="rollResult?.rootNote"
+            />
+        </mat-form-field>
+
+        <mat-form-field class="starting-on">
+            <mat-label>Chord type</mat-label>
+            <input matInput type="text" [readonly]="true" [value]="rollResult?.chord" />
+        </mat-form-field>
+    </div>
+</mat-card>
+
+<div class="roll-button">
+    <button mat-raised-button color="primary" (click)="roll()">
+        <mat-icon>skip_next</mat-icon>
+    </button>
+</div>
