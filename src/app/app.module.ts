@@ -19,7 +19,6 @@ import { LobbyHeaderComponent } from "./lobby/lobby-header/lobby-header.componen
 import { LobbyComponent } from "./lobby/lobby.component";
 import { RoomCarouselComponent } from "./room-carousel/room-carousel.component";
 import { RoomHeaderComponent } from "./room/room-header/room-header.component";
-import { RoomLayoutComponent } from "./room/room-layout/room-layout.component";
 import { SharedModule } from "./shared/shared.module";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 
@@ -32,7 +31,6 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
         LobbyHeaderComponent,
         LobbyComponent,
         RoomHeaderComponent,
-        RoomLayoutComponent,
         SidenavComponent,
         RoomCarouselComponent,
     ],
