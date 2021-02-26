@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_NOTES_ROOM } from "../constants/game-rooms";
-import { GuitarString } from "../models/guitar-string.enum";
-import { Note } from "../models/note.enum";
-import { RandomGeneratorService } from "../random-generator.service";
+import { GAME_NOTES_ROOM } from "../../constants/game-rooms";
+import { GuitarString } from "../../models/guitar-string.enum";
+import { Note } from "../../models/note.enum";
+import { RandomGeneratorService } from "../../random-generator.service";
 
 interface RollResult {
     rootNote: Note;

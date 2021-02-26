@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_CHORDS_ROOM } from "../constants/game-rooms";
-import { Note } from "../models/note.enum";
+import { GAME_CHORDS_ROOM } from "../../constants/game-rooms";
+import { Note } from "../../models/note.enum";
 
 interface RollResult {
     rootNote: Note;
