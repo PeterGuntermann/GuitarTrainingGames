@@ -22,6 +22,8 @@ import { GameScalesComponent } from "./rooms/game-scales/game-scales.component";
 import { ReleaseHistoryComponent } from "./rooms/release-history/release-history.component";
 import { SharedModule } from "./shared/shared.module";
 import { SidenavComponent } from "./sidenav/sidenav.component";
+import { AboutTheAppComponent } from "./rooms/about-the-app/about-the-app.component";
+import { SettingsComponent } from "./rooms/settings/settings.component";
 
 @NgModule({
     declarations: [
@@ -35,6 +37,8 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
         SidenavComponent,
         RoomCarouselComponent,
         ReleaseHistoryComponent,
+        AboutTheAppComponent,
+        SettingsComponent,
     ],
     imports: [
         BrowserAnimationsModule,
