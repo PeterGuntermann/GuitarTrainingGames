@@ -19,11 +19,12 @@ export class ReleaseHistoryComponent implements OnInit {
         this.versions = [];
         this.versions.push({
             versionNumber: "v1.0",
-            features: ["foo", "bar"],
-        });
-        this.versions.push({
-            versionNumber: "v1.0",
-            features: ["foo", "bar"],
+            features: [
+                "Three simple games based on random generators: Notes, Chords, Scales",
+                "Lobby with quick navigation",
+                "Side menu with navigation",
+                "Material Design",
+            ],
         });
     }
 }
