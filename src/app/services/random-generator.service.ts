@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { GuitarString } from "./models/guitar-string.enum";
-import { Note } from "./models/note.enum";
-import { Scale } from "./models/scale.enum";
+import { GuitarString } from "../models/guitar-string.enum";
+import { Note } from "../models/note.enum";
+import { Scale } from "../models/scale.enum";
 
 @Injectable({
     providedIn: "root",

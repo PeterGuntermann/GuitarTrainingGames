@@ -3,7 +3,7 @@ import { GAME_SCALES_ROOM } from "../../constants/game-rooms";
 import { GuitarString } from "../../models/guitar-string.enum";
 import { Note } from "../../models/note.enum";
 import { Scale } from "../../models/scale.enum";
-import { RandomGeneratorService } from "../../random-generator.service";
+import { RandomGeneratorService } from "../../services/random-generator.service";
 
 interface RollResult {
     rootNote: Note;
