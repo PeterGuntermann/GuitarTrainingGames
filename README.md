@@ -31,6 +31,6 @@ Save Actions Plugin:
 
 Compare to: https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
 
--   Install "github pages" tool (see package.json): `npm i angular-cli-ghpages — save-dev`
--   Build app: `ng build --prod --base-href "https://GithubUserName.github.io/GuitarTrainingGames/"`
+-   Install "github pages" tool (see package.json): `npm i angular-cli-ghpages --save-dev`
+-   Build app: `ng build --prod --base-href "https://PeterGuntermann.github.io/GuitarTrainingGames/"`
 -   Deploy to Github Pages: `npx angular-cli-ghpages — dir=dist/GuitarTrainingGames`
