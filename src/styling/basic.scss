@@ -1,0 +1,21 @@
+@import "./constants";
+
+/* Basic global styling for the app */
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background: $color-accent-100;
+    font-family: $font-family;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+mat-card {
+    margin: 1rem;
+}

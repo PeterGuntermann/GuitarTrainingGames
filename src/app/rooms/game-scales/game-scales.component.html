@@ -1,7 +1,9 @@
 <room-header [roomTitle]="ROOM.title"></room-header>
 
-<mat-card class="explanation">
-    <h2>How to play</h2>
+<mat-expansion-panel class="explanation">
+    <mat-expansion-panel-header>
+        <mat-panel-title> How to play? </mat-panel-title>
+    </mat-expansion-panel-header>
     <ul>
         <li>
             Click the button below to roll a mode, a root node and a string to start on.
@@ -9,7 +11,7 @@
         <li>Play the first 9 notes of that mode up and down again.</li>
         <li>Re-roll to get another mode.</li>
     </ul>
-</mat-card>
+</mat-expansion-panel>
 
 <mat-card class="roll-result">
     <h2>Result</h2>
