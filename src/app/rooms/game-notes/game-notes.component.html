@@ -1,13 +1,15 @@
 <room-header [roomTitle]="ROOM.title"></room-header>
 
-<mat-card class="explanation">
-    <h2>How to play</h2>
+<mat-expansion-panel class="explanation">
+    <mat-expansion-panel-header>
+        <mat-panel-title> How to play? </mat-panel-title>
+    </mat-expansion-panel-header>
     <ul>
         <li>Click the button below to roll a note and a string.</li>
         <li>Find and play the note on the displayed string.</li>
         <li>Re-roll to get another note.</li>
     </ul>
-</mat-card>
+</mat-expansion-panel>
 
 <mat-card class="roll-result">
     <h2>Result</h2>
