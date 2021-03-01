@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { IconService } from "../../shared/icon-service/icon.service";
 
 @Component({
     selector: "lobby-header",
@@ -11,7 +10,7 @@ export class LobbyHeaderComponent implements OnInit {
 
     @Output() toggleMenuButtonClicked = new EventEmitter();
 
-    constructor(public readonly icon: IconService) {}
+    constructor() {}
 
     ngOnInit() {}
 
