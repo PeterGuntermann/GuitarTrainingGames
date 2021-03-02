@@ -10,6 +10,7 @@ export class FeedbackComponent implements OnInit {
     isLinear = false;
     firstFormGroup: FormGroup;
     secondFormGroup: FormGroup;
+    feedbackText: string;
 
     constructor(private _formBuilder: FormBuilder) {}
 

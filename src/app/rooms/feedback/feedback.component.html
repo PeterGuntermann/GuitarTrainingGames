@@ -3,7 +3,13 @@
 <mat-card>
     <mat-card-header>Proof of Concept</mat-card-header>
 
-    <input />
+    <mat-form-field class="example-form-field">
+        <mat-label>Feedback-Text</mat-label>
+
+        <input matInput type="text" [(ngModel)]="feedbackText" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Submit</button>
 </mat-card>
 
 <mat-card>
