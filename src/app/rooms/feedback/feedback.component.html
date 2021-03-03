@@ -1,15 +1,33 @@
 <room-header [roomTitle]="'Send your feedback'"></room-header>
 
 <mat-card>
-    <mat-card-header>Proof of Concept</mat-card-header>
+    <mat-card-header>
+        <div mat-card-avatar><mat-icon> info </mat-icon></div>
+        <mat-card-title> Privacy statement </mat-card-title>
+        <mat-card-subtitle> Powered by Mailthis.to </mat-card-subtitle>
+    </mat-card-header>
 
-    <mat-form-field class="example-form-field">
-        <mat-label>Feedback-Text</mat-label>
+    <mat-card-content>
+        <p>
+            On submit you will be redirected to another website. Read more about this free
+            service <a href="https://mailthis.to/">here</a>.
+        </p>
+        <p>Maybe you will be prompted to fill out a Captcha.</p>
+    </mat-card-content>
+</mat-card>
 
-        <input matInput type="text" [(ngModel)]="feedbackText" />
-    </mat-form-field>
+<mat-card>
+    <mat-card-header> Proof of Concept </mat-card-header>
 
-    <button mat-raised-button color="primary">Submit</button>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+        <mat-form-field class="example-form-field">
+            <mat-label> Feedback-Text </mat-label>
+
+            <input matInput type="text" formControlName="feedbackText" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">Submit</button>
+    </form>
 </mat-card>
 
 <mat-card>
