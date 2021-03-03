@@ -31,7 +31,7 @@ export class FeedbackComponent implements OnInit {
 
     onSubmit(formData) {
         const mailApi = "https://mailthis.to/pgu";
-        console.log(this.formGroup);
+        // TODO: 03.03.2021 Move to a new service
         this._http
             .post(mailApi, formData, { responseType: "text" })
             .pipe(
