@@ -11,8 +11,6 @@ export class FeedbackComponent implements OnInit {
     formGroup: FormGroup;
 
     isLinear = false;
-    firstFormGroup: FormGroup;
-    secondFormGroup: FormGroup;
 
     constructor(
         private _formBuilder: FormBuilder,
@@ -22,12 +20,7 @@ export class FeedbackComponent implements OnInit {
     ngOnInit(): void {
         this.formGroup = this._formBuilder.group({
             feedbackText: ["", Validators.required],
-        });
-        this.firstFormGroup = this._formBuilder.group({
-            firstCtrl: ["", Validators.required],
-        });
-        this.secondFormGroup = this._formBuilder.group({
-            secondCtrl: ["", Validators.required],
+            authorName: [""],
         });
     }
 

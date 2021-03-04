@@ -1,6 +1,31 @@
 <room-header [roomTitle]="'Send your feedback'"></room-header>
 
-<mat-card>
+<mat-card class="feedback-form">
+    <mat-card-header>
+        <div mat-card-avatar><mat-icon>message</mat-icon></div>
+        <mat-card-title>Your feedback</mat-card-title>
+        <mat-card-subtitle>
+            Tell me what you want, what you really really want.
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+        <mat-form-field class="feedbackText">
+            <mat-label>What's your feedback?</mat-label>
+            <textarea matInput type="text" required formControlName="feedbackText">
+            </textarea>
+        </mat-form-field>
+
+        <mat-form-field class="authorName">
+            <mat-label>What's your name? (optional)</mat-label>
+            <input matInput type="text" formControlName="authorName" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">Submit</button>
+    </form>
+</mat-card>
+
+<mat-card class="privacy-statement">
     <mat-card-header>
         <div mat-card-avatar><mat-icon> info </mat-icon></div>
         <mat-card-title> Privacy statement </mat-card-title>
@@ -14,72 +39,4 @@
         </p>
         <p>Maybe you will be prompted to fill out a Captcha.</p>
     </mat-card-content>
-</mat-card>
-
-<mat-card>
-    <mat-card-header> Proof of Concept </mat-card-header>
-
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
-        <mat-form-field class="example-form-field">
-            <mat-label> Feedback-Text </mat-label>
-
-            <input matInput type="text" formControlName="feedbackText" />
-        </mat-form-field>
-
-        <button mat-raised-button color="primary">Submit</button>
-    </form>
-</mat-card>
-
-<mat-card>
-    <mat-card-subtitle>Step form to be used later</mat-card-subtitle>
-
-    <a href="https://material.angular.io/components/stepper/examples" target="_blank"
-        >See example code.</a
-    >
-
-    <mat-vertical-stepper [linear]="isLinear" #stepper>
-        <mat-step [stepControl]="firstFormGroup">
-            <form [formGroup]="firstFormGroup">
-                <ng-template matStepLabel>Fill out your name</ng-template>
-                <mat-form-field>
-                    <mat-label>Name</mat-label>
-                    <input
-                        matInput
-                        placeholder="Last name, First name"
-                        formControlName="firstCtrl"
-                        required
-                    />
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperNext>Next</button>
-                </div>
-            </form>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
-                <ng-template matStepLabel>Fill out your address</ng-template>
-                <mat-form-field>
-                    <mat-label>Address</mat-label>
-                    <input
-                        matInput
-                        formControlName="secondCtrl"
-                        placeholder="Ex. 1 Main St, New York, NY"
-                        required
-                    />
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
-                </div>
-            </form>
-        </mat-step>
-        <mat-step>
-            <ng-template matStepLabel>Done</ng-template>
-            <p>You are now done.</p>
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Reset</button>
-            </div>
-        </mat-step>
-    </mat-vertical-stepper>
 </mat-card>
