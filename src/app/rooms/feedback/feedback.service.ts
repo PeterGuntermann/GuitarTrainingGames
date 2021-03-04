@@ -8,6 +8,7 @@ import { map, take } from "rxjs/operators";
 })
 export class FeedbackService {
     readonly MAIL_API = "https://mailthis.to/pgu";
+    readonly CONFIRM_URL = "https://mailthis.to/confirm";
 
     constructor(private _http: HttpClient) {}
 
@@ -24,5 +25,15 @@ export class FeedbackService {
             ),
             take(1)
         );
+    }
+
+    public handleNext(response: string) {
+        location.href = this.CONFIRM_URL;
+        console.log(response);
+    }
+
+    public handleError(error: any) {
+        console.warn(error.responseText);
+        console.log({ error });
     }
 }

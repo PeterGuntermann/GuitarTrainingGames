@@ -32,15 +32,11 @@ export class FeedbackComponent implements OnInit {
     }
 
     onSubmit(formData) {
-        this._feedbackService.sendFeedback(formData).subscribe(
-            response => {
-                location.href = "https://mailthis.to/confirm";
-                console.log(response);
-            },
-            error => {
-                console.warn(error.responseText);
-                console.log({ error });
-            }
-        );
+        this._feedbackService
+            .sendFeedback(formData)
+            .subscribe(
+                this._feedbackService.handleNext,
+                this._feedbackService.handleError
+            );
     }
 }
