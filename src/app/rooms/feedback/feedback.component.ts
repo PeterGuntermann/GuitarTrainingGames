@@ -18,6 +18,7 @@ export class FeedbackComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        // TODO: 04.03.2021 Style this form, disable submit etc.
         this.formGroup = this._formBuilder.group({
             feedbackText: ["", Validators.required],
             authorName: [""],
