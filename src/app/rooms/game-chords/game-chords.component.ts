@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { GAME_CHORDS_ROOM } from "../../constants/game-rooms";
+import { ChordType } from "../../models/chord-type.enum";
 import { Note } from "../../models/note.enum";
+import { RandomGeneratorService } from "../../services/random-generator.service";
 
 interface RollResult {
     rootNote: Note;
@@ -17,9 +19,26 @@ export class GameChordsComponent implements OnInit {
 
     rollResult: RollResult;
 
-    constructor() {}
+    constructor(private randomGenerator: RandomGeneratorService) {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+        console.log(this.randomGenerator.chooseFromEnum(ChordType));
+    }
 
     roll() {
         // TODO: 25.02.2021 Choose randomly

@@ -1,4 +1,4 @@
-export enum chordType {
+export enum ChordType {
     Major = "",
     Minor = "m",
     Diminished = "dim",
