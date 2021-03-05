@@ -1,0 +1,16 @@
+export enum chordType {
+    Major = "",
+    Minor = "m",
+    Diminished = "dim",
+    Dominant7 = "7",
+    Major7 = "maj7",
+    Minor7 = "m7",
+    Minor7Flat5 = "m7♭5",
+    Major6 = "6",
+    Minor6 = "m6",
+    Dominant7Major9 = "9",
+    Dominant7Flat9 = "7♭9",
+    Major9 = "maj9",
+    Minor9 = "m9",
+    Minor7Flat9 = "m7♭9",
+}
