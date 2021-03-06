@@ -13,4 +13,6 @@ export enum ChordType {
     Major9 = "maj9",
     Minor9 = "m9",
     Minor7Flat9 = "m7♭9",
+    Sus2 = "sus2",
+    Sus4 = "sus4",
 }

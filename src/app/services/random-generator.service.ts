@@ -4,36 +4,60 @@ import { GuitarString } from "../models/guitar-string.enum";
 import { Note } from "../models/note.enum";
 import { Scale } from "../models/scale.enum";
 
+/**
+ * The one and only service to generate anything randomly.
+ */
 @Injectable({
     providedIn: "root",
 })
 export class RandomGeneratorService {
     constructor() {}
 
+    /**
+     * @returns one of the 12 notes randomly.
+     */
     public randomNote(): Note {
         return this.chooseFromEnum(Note);
     }
 
+    /**
+     * @returns one of many chord extensions (e.g. maj7, m7♭5) randomly.
+     */
     public randomChordType(): ChordType {
         return this.chooseFromEnum(ChordType);
     }
 
+    /**
+     * @returns one scale (e.g. phrygian, mixolydian) randomly.
+     */
     public randomScale(): Scale {
-        const enumKeys = Object.keys(Scale);
-        const randomInteger = this.randomInteger(0, 6);
-        return Scale[enumKeys[randomInteger]];
+        return this.chooseFromEnum(Scale);
     }
 
+    /**
+     * @returns one guitar string randomly except for higher B and E.
+     */
     public randomGuitarStringForScales(): GuitarString {
-        const enumKeys = Object.keys(GuitarString);
-        const randomInteger = this.randomInteger(0, 3);
-        return GuitarString[enumKeys[randomInteger]];
+        return this.chooseFromList([
+            GuitarString.G,
+            GuitarString.D,
+            GuitarString.A,
+            GuitarString.lowerE,
+        ]);
     }
 
+    /**
+     * @returns one guitar string randomly.
+     */
     public randomGuitarStringForNotes(): GuitarString {
-        const enumKeys = Object.keys(GuitarString);
-        const randomInteger = this.randomInteger(0, 5);
-        return GuitarString[enumKeys[randomInteger]];
+        return this.chooseFromList([
+            GuitarString.higherE,
+            GuitarString.higherB,
+            GuitarString.G,
+            GuitarString.D,
+            GuitarString.A,
+            GuitarString.lowerE,
+        ]);
     }
 
     /**
@@ -55,5 +79,15 @@ export class RandomGeneratorService {
         const max = enumKeys.length - 1;
         const randomInteger = this.randomInteger(0, max);
         return enumType[enumKeys[randomInteger]];
+    }
+
+    /**
+     * Chooses randomly from a list.
+     * @param list The list to choose from.
+     */
+    public chooseFromList(list: any[]): any {
+        const max = list.length - 1;
+        const randomInteger = this.randomInteger(0, max);
+        return list[randomInteger];
     }
 }
