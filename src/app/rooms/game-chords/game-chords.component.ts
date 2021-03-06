@@ -6,7 +6,7 @@ import { RandomGeneratorService } from "../../services/random-generator.service"
 
 interface RollResult {
     rootNote: Note;
-    chord: any; // TODO: 25.02.2021 new interface
+    chordType: ChordType;
 }
 
 @Component({
@@ -15,36 +15,18 @@ interface RollResult {
     styleUrls: ["./game-chords.component.scss"],
 })
 export class GameChordsComponent implements OnInit {
-    public readonly ROOM = GAME_CHORDS_ROOM;
+    readonly ROOM = GAME_CHORDS_ROOM;
 
     rollResult: RollResult;
 
-    constructor(private randomGenerator: RandomGeneratorService) {}
+    constructor(private _randomGenerator: RandomGeneratorService) {}
 
-    ngOnInit(): void {
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-        console.log(this.randomGenerator.chooseFromEnum(ChordType));
-    }
+    ngOnInit(): void {}
 
-    roll() {
-        // TODO: 25.02.2021 Choose randomly
+    roll(): void {
         this.rollResult = {
-            rootNote: Note.Asharp_Bflat,
-            chord: "maj",
+            rootNote: this._randomGenerator.randomNote(),
+            chordType: this._randomGenerator.randomChordType(),
         };
     }
 }

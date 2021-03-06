@@ -1,5 +1,5 @@
 export enum ChordType {
-    Major = "",
+    Major = " ",
     Minor = "m",
     Diminished = "dim",
     Dominant7 = "7",
