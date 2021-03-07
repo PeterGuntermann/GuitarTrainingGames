@@ -4,7 +4,8 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
+        "build": "ng build --prod --base-href 'https://PeterGuntermann.github.io/GuitarTrainingGames/'",
+        "deploy": "npx angular-cli-ghpages --dir=dist/GuitarTrainingGames",
         "test": "jest",
         "lint": "ng lint",
         "e2e": "ng e2e",
