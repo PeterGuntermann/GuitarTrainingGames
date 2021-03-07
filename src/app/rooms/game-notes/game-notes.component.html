@@ -13,25 +13,17 @@
 
 <mat-card class="roll-result">
     <div class="wrapper">
-        <mat-form-field class="root">
-            <mat-label>Note</mat-label>
-            <input
-                matInput
-                type="text"
-                [readonly]="true"
-                [value]="rollResult?.rootNote"
-            />
-        </mat-form-field>
+        <app-value-display
+            class="root-note"
+            [label]="'Note'"
+            [value]="rollResult?.rootNote"
+        ></app-value-display>
 
-        <mat-form-field class="starting-on">
-            <mat-label>Played on</mat-label>
-            <input
-                matInput
-                type="text"
-                [readonly]="true"
-                [value]="rollResult?.guitarString"
-            />
-        </mat-form-field>
+        <app-value-display
+            class="played-on"
+            [label]="'Played on'"
+            [value]="rollResult?.guitarString"
+        ></app-value-display>
     </div>
 </mat-card>
 

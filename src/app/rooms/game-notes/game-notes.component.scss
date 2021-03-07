@@ -8,9 +8,14 @@
     .wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    mat-form-field {
-        width: 8rem;
+    .root-note {
+        width: 6rem;
+    }
+
+    .played-on {
+        width: 10rem;
     }
 }
