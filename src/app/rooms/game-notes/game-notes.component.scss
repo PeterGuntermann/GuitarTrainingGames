@@ -5,17 +5,15 @@
 }
 
 .roll-result {
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    .root-note {
-        width: 6rem;
-    }
+.root-note {
+    width: 6rem;
+}
 
-    .played-on {
-        width: 10rem;
-    }
+.played-on {
+    width: 10rem;
 }

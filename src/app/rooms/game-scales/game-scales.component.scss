@@ -5,19 +5,17 @@
 }
 
 .roll-result {
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    .root,
-    .mode {
-        width: 8rem;
-        margin-bottom: 1rem;
-    }
+.root,
+.mode {
+    width: 8rem;
+    margin-bottom: 1rem;
+}
 
-    .starting-on {
-        width: 100%;
-    }
+.starting-on {
+    width: 100%;
 }

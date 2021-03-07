@@ -20,3 +20,10 @@ ul {
 mat-card {
     margin: 1rem;
 }
+
+.main-wrapper {
+    @media (min-device-width: 400px) {
+        width: 400px;
+        margin: 0 auto;
+    }
+}

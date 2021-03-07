@@ -5,14 +5,12 @@
 }
 
 .roll-result {
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    .root-note,
-    .chord-type {
-        width: 8rem;
-    }
+.root-note,
+.chord-type {
+    width: 8rem;
 }

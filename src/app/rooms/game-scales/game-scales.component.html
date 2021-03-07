@@ -1,20 +1,21 @@
 <room-header [roomTitle]="ROOM.title"></room-header>
 
-<mat-expansion-panel class="explanation">
-    <mat-expansion-panel-header>
-        <mat-panel-title> How to play? </mat-panel-title>
-    </mat-expansion-panel-header>
-    <ul>
-        <li>
-            Click the button below to roll a mode, a root node and a string to start on.
-        </li>
-        <li>Play the first 9 notes of that mode up and down again.</li>
-        <li>Re-roll to get another mode.</li>
-    </ul>
-</mat-expansion-panel>
+<div class="main-wrapper">
+    <mat-expansion-panel class="explanation">
+        <mat-expansion-panel-header>
+            <mat-panel-title> How to play? </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+            <li>
+                Click the button below to roll a mode, a root node and a string to start
+                on.
+            </li>
+            <li>Play the first 9 notes of that mode up and down again.</li>
+            <li>Re-roll to get another mode.</li>
+        </ul>
+    </mat-expansion-panel>
 
-<mat-card class="roll-result">
-    <div class="wrapper">
+    <mat-card class="roll-result">
         <app-value-display
             class="root"
             [label]="'Root'"
@@ -32,7 +33,7 @@
             [label]="'Starting on'"
             [value]="rollResult?.guitarString"
         ></app-value-display>
-    </div>
-</mat-card>
+    </mat-card>
 
-<app-roll-button (click)="roll()"></app-roll-button>
+    <app-roll-button (click)="roll()"></app-roll-button>
+</div>

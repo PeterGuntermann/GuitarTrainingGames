@@ -1,18 +1,18 @@
 <room-header [roomTitle]="ROOM.title"></room-header>
 
-<mat-expansion-panel class="explanation">
-    <mat-expansion-panel-header>
-        <mat-panel-title> How to play? </mat-panel-title>
-    </mat-expansion-panel-header>
-    <ul>
-        <li>Click the button below to roll a note and a string.</li>
-        <li>Find and play the note on the displayed string.</li>
-        <li>Re-roll to get another note.</li>
-    </ul>
-</mat-expansion-panel>
+<div class="main-wrapper">
+    <mat-expansion-panel class="explanation">
+        <mat-expansion-panel-header>
+            <mat-panel-title> How to play? </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+            <li>Click the button below to roll a note and a string.</li>
+            <li>Find and play the note on the displayed string.</li>
+            <li>Re-roll to get another note.</li>
+        </ul>
+    </mat-expansion-panel>
 
-<mat-card class="roll-result">
-    <div class="wrapper">
+    <mat-card class="roll-result">
         <app-value-display
             class="root-note"
             [label]="'Note'"
@@ -24,7 +24,7 @@
             [label]="'Played on'"
             [value]="rollResult?.guitarString"
         ></app-value-display>
-    </div>
-</mat-card>
+    </mat-card>
 
-<app-roll-button (click)="roll()"></app-roll-button>
+    <app-roll-button (click)="roll()"></app-roll-button>
+</div>
