@@ -8,9 +8,11 @@
     .wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    mat-form-field {
+    .root-note,
+    .chord-type {
         width: 8rem;
     }
 }
