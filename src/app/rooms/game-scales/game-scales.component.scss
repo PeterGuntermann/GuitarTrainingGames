@@ -8,10 +8,16 @@
     .wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    app-value-display,
-    mat-form-field {
-        width: 6rem;
+    .root,
+    .mode {
+        width: 8rem;
+        margin-bottom: 1rem;
+    }
+
+    .starting-on {
+        width: 100%;
     }
 }

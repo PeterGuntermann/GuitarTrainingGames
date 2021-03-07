@@ -15,33 +15,6 @@
 
 <mat-card class="roll-result">
     <div class="wrapper">
-        <mat-form-field class="root">
-            <mat-label>Root</mat-label>
-            <input
-                matInput
-                type="text"
-                [readonly]="true"
-                [value]="rollResult?.rootNote"
-            />
-        </mat-form-field>
-
-        <mat-form-field class="mode">
-            <mat-label>Mode</mat-label>
-            <input matInput type="text" [readonly]="true" [value]="rollResult?.scale" />
-        </mat-form-field>
-
-        <mat-form-field class="starting-on">
-            <mat-label>Starting on</mat-label>
-            <input
-                matInput
-                type="text"
-                [readonly]="true"
-                [value]="rollResult?.guitarString"
-            />
-        </mat-form-field>
-    </div>
-
-    <div class="wrapper">
         <app-value-display
             class="root"
             [label]="'Root'"
