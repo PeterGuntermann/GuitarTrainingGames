@@ -1,0 +1,16 @@
+@import "../../../styling/constants";
+
+:host {
+    display: block;
+}
+
+.label {
+    color: $color-grey;
+    font-size: 0.8rem;
+    height: 1.5rem;
+}
+
+.value {
+    font-size: 1.5rem;
+    height: 1.5rem;
+}

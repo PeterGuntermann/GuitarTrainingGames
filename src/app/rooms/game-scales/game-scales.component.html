@@ -40,6 +40,26 @@
             />
         </mat-form-field>
     </div>
+
+    <div class="wrapper">
+        <app-value-display
+            class="root"
+            [label]="'Root'"
+            [value]="rollResult?.rootNote"
+        ></app-value-display>
+
+        <app-value-display
+            class="mode"
+            [label]="'Mode'"
+            [value]="rollResult?.scale"
+        ></app-value-display>
+
+        <app-value-display
+            class="starting-on"
+            [label]="'Starting on'"
+            [value]="rollResult?.guitarString"
+        ></app-value-display>
+    </div>
 </mat-card>
 
 <app-roll-button (click)="roll()"></app-roll-button>
