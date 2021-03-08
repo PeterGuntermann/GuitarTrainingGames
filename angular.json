@@ -104,6 +104,14 @@
                             "devServerTarget": "GuitarTrainingGames:serve:production"
                         }
                     }
+                },
+                "deploy": {
+                    "builder": "angular-cli-ghpages:deploy",
+                    "options": {
+                        "baseHref": "https://PeterGuntermann.github.io/GuitarTrainingGames/",
+                        "name": "Peter Guntermann",
+                        "email": "pgu@posteo.de"
+                    }
                 }
             }
         }

@@ -34,3 +34,8 @@ Compare to: https://medium.com/tech-insights/how-to-deploy-angular-apps-to-githu
 -   Install "github pages" tool (see package.json): `npm i angular-cli-ghpages --save-dev`
 -   Build app: `ng build --prod --base-href "https://PeterGuntermann.github.io/GuitarTrainingGames/"`
 -   Deploy to Github Pages: `npx angular-cli-ghpages --dir=dist/GuitarTrainingGames`
+
+## Update 2021-03-08
+
+-   Somehow, the above way doesn't work anymore. 🤷‍♂️
+-   Anyways, you now only need to run `ng deploy` as a configuration has been added to the `angular.json` file.
