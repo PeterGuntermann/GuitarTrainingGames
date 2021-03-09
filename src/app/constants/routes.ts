@@ -9,6 +9,7 @@ import { ReleaseHistoryComponent } from "../rooms/release-history/release-histor
 import { SettingsComponent } from "../rooms/settings/settings.component";
 
 export const ROUTES: Routes = [
+    { path: "", component: LobbyComponent },
     { path: "lobby", component: LobbyComponent },
     { path: "game-notes", component: GameNotesComponent },
     { path: "game-chords", component: GameChordsComponent },
@@ -17,5 +18,5 @@ export const ROUTES: Routes = [
     { path: "about-the-app", component: AboutTheAppComponent },
     { path: "settings", component: SettingsComponent },
     { path: "feedback", component: FeedbackComponent },
-    { path: "**", component: LobbyComponent },
+    { path: "**", redirectTo: "" },
 ];
