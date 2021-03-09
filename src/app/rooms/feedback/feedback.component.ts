@@ -12,6 +12,10 @@ export class FeedbackComponent implements OnInit {
 
     isLinear = false;
 
+    get isSubmitButtonDisabled(): boolean {
+        return this.formGroup.value?.feedbackText === "";
+    }
+
     constructor(
         private _formBuilder: FormBuilder,
         private _feedbackService: FeedbackService

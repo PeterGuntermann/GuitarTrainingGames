@@ -22,7 +22,12 @@
                 <input matInput type="text" formControlName="authorName" />
             </mat-form-field>
 
-            <button mat-raised-button color="primary" class="submit-button">
+            <button
+                mat-raised-button
+                color="primary"
+                class="submit-button"
+                [disabled]="isSubmitButtonDisabled"
+            >
                 Submit
             </button>
         </form>
