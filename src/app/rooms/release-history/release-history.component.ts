@@ -24,6 +24,7 @@ export class ReleaseHistoryComponent implements OnInit {
                 "Lobby with quick navigation",
                 "Side menu with navigation",
                 "Material Design",
+                "Feedback form",
             ],
         });
     }

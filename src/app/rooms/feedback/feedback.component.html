@@ -1,42 +1,46 @@
 <room-header [roomTitle]="'Send your feedback'"></room-header>
 
-<mat-card class="feedback-form">
-    <mat-card-header>
-        <div mat-card-avatar class="card-avatar"><mat-icon>message</mat-icon></div>
-        <mat-card-title>What is hip?</mat-card-title>
-        <mat-card-subtitle>
-            Tell me tell me, if you think you know.
-        </mat-card-subtitle>
-    </mat-card-header>
+<div class="main-wrapper">
+    <mat-card class="feedback-form">
+        <mat-card-header>
+            <div mat-card-avatar class="card-avatar"><mat-icon>message</mat-icon></div>
+            <mat-card-title>What is hip?</mat-card-title>
+            <mat-card-subtitle>
+                Tell me tell me, if you think you know.
+            </mat-card-subtitle>
+        </mat-card-header>
 
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
-        <mat-form-field class="feedbackText">
-            <mat-label>What's your feedback?</mat-label>
-            <textarea matInput type="text" required formControlName="feedbackText">
-            </textarea>
-        </mat-form-field>
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+            <mat-form-field class="feedbackText">
+                <mat-label>What's your feedback?</mat-label>
+                <textarea matInput type="text" required formControlName="feedbackText">
+                </textarea>
+            </mat-form-field>
 
-        <mat-form-field class="authorName">
-            <mat-label>What's your name? (optional)</mat-label>
-            <input matInput type="text" formControlName="authorName" />
-        </mat-form-field>
+            <mat-form-field class="authorName">
+                <mat-label>What's your name? (optional)</mat-label>
+                <input matInput type="text" formControlName="authorName" />
+            </mat-form-field>
 
-        <button mat-raised-button color="primary">Submit</button>
-    </form>
-</mat-card>
+            <button mat-raised-button color="primary" class="submit-button">
+                Submit
+            </button>
+        </form>
+    </mat-card>
 
-<mat-card class="privacy-statement">
-    <mat-card-header>
-        <div mat-card-avatar class="card-avatar"><mat-icon>info</mat-icon></div>
-        <mat-card-title> Privacy statement </mat-card-title>
-        <mat-card-subtitle> Powered by Mailthis.to </mat-card-subtitle>
-    </mat-card-header>
+    <mat-card class="privacy-statement">
+        <mat-card-header>
+            <div mat-card-avatar class="card-avatar"><mat-icon>info</mat-icon></div>
+            <mat-card-title> Privacy statement </mat-card-title>
+            <mat-card-subtitle> Powered by Mailthis.to </mat-card-subtitle>
+        </mat-card-header>
 
-    <mat-card-content>
-        <p>
-            On submit you will be redirected to another website. Read more about this free
-            service <a href="https://mailthis.to/">here</a>.
-        </p>
-        <p>Maybe you will be prompted to fill out a Captcha.</p>
-    </mat-card-content>
-</mat-card>
+        <mat-card-content>
+            <p>
+                On submit you will be redirected to another website. Read more about this
+                free service <a href="https://mailthis.to/">here</a>.
+            </p>
+            <p>Maybe you will be prompted to fill out a Captcha.</p>
+        </mat-card-content>
+    </mat-card>
+</div>
