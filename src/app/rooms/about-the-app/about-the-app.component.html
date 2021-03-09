@@ -1,14 +1,24 @@
 <room-header [roomTitle]="'About the app'"></room-header>
 
 <div class="main-wrapper">
+    <mat-card class="version">
+        <mat-card-header>
+            <div mat-card-avatar class="card-avatar">
+                <mat-icon>view_in_ar</mat-icon>
+            </div>
+            <mat-card-title>Version</mat-card-title>
+            <mat-card-subtitle>GuitarTrainingGames v{{ APP_VERSION }}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+
     <mat-card class="copyright">
         <mat-card-header>
             <div mat-card-avatar class="card-avatar">
                 <mat-icon>copyright</mat-icon>
             </div>
             <mat-card-title>Copyright</mat-card-title>
+            <mat-card-subtitle>2021 - {{ year }}, Peter Guntermann</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content>2021 - {{ year }}, Peter Guntermann</mat-card-content>
     </mat-card>
 
     <mat-card class="about-the-developer">

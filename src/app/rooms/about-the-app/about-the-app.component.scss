@@ -4,3 +4,10 @@
     background-image: url("../../../assets/images/profile-pic.jpg");
     background-size: cover;
 }
+
+.version,
+.copyright {
+    mat-card-subtitle {
+        margin-bottom: 0;
+    }
+}
