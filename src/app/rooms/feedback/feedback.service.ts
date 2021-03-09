@@ -12,8 +12,12 @@ export class FeedbackService {
 
     constructor(private _http: HttpClient) {}
 
-    // TODO: 04.03.2021 Proper typing
-    public sendFeedback(formData: any): Observable<string> {
+    public sendFeedback(formData: {
+        feedbackText: string;
+        authorName: string;
+    }): Observable<string> {
+        if (formData.authorName === "") formData.authorName = "anonymous";
+
         return this._http.post(this.MAIL_API, formData, { responseType: "text" }).pipe(
             map(
                 response => {
