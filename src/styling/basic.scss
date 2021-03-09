@@ -19,6 +19,12 @@ ul {
 
 mat-card {
     margin: 1rem;
+
+    [mat-card-avatar].card-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .main-wrapper {
