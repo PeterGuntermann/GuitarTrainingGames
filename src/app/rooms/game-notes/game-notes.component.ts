@@ -26,7 +26,7 @@ export class GameNotesComponent implements OnInit {
     roll() {
         this.rollResult = {
             rootNote: this.randomGenerator.randomNote(),
-            guitarString: this.randomGenerator.randomGuitarStringForScales(),
+            guitarString: this.randomGenerator.randomGuitarStringForNotes(),
         };
     }
 }
