@@ -17,7 +17,7 @@ As a guitarist I want get a mode with a root key by only clicking one button so 
 -   Game: Chords
     -   You can see suggestions on how to play the rolled chord on a fretboard visualization.
     -   It is possible to choose which chords should be possible to be rolled (e.g. a dialog with checkboxes/slide-toggles).
--   Sidenav shows a cool picture and/or logo
+-   Sidenav shows a cool picture and/or logo.
 
 # Technical notes
 
