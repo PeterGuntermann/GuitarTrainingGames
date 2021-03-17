@@ -29,6 +29,7 @@ import { ReleaseHistoryComponent } from "./rooms/release-history/release-history
 import { SettingsComponent } from "./rooms/settings/settings.component";
 import { SharedModule } from "./shared/shared.module";
 import { SidenavComponent } from "./sidenav/sidenav.component";
+import { PlaygroundComponent } from "./playground/playground.component";
 
 @NgModule({
     declarations: [
@@ -45,6 +46,7 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
         AboutTheAppComponent,
         SettingsComponent,
         FeedbackComponent,
+        PlaygroundComponent,
     ],
     imports: [
         BrowserAnimationsModule,
