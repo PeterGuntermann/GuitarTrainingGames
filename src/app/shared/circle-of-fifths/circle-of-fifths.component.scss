@@ -1,0 +1,25 @@
+$sidelength: 300px;
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.cof-container {
+    background: #eeeeee;
+    width: $sidelength;
+    height: $sidelength;
+}
+
+.cof-circle {
+    background: #dddddd;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.cof-line {
+    background: #333333;
+    width: 2px;
+    height: 100%;
+    transform: rotate(0);
+}
