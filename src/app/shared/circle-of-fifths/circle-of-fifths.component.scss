@@ -1,3 +1,5 @@
+@import "../../../styling/constants";
+
 $sidelength: 300px;
 
 :host {
@@ -7,15 +9,29 @@ $sidelength: 300px;
 
 .cof-container {
     position: relative;
-    background: #eeeeee;
     width: $sidelength;
     height: $sidelength;
 }
 
 .cof-circle {
-    background: #dddddd;
+    background: #eeeeee;
+    box-shadow: 0 0 3px $color-grey;
     border-radius: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .center {
+        border-radius: 50%;
+        box-shadow: inset 0 0 3px $color-grey;
+        background: #ffffff;
+        height: 0.5 * $sidelength;
+        width: 0.5 * $sidelength;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .cof-notes {
@@ -27,7 +43,6 @@ $sidelength: 300px;
     align-items: center;
 
     span {
-        background: rgba(100, 100, 255, 0.5);
         height: 0.2 * $sidelength;
         width: 0.2 * $sidelength;
         display: flex;
@@ -36,8 +51,14 @@ $sidelength: 300px;
         position: absolute;
         border-radius: 50%;
 
-        @mixin coordinates($x, $y) {
-            transform: translate(200% * $x, 200% * $y);
+        &.active {
+            box-shadow: 0 0 3px $color-grey;
+            background: $color-primary-500;
+            color: $color-white;
+        }
+
+        @mixin coordinates($x, $y, $factor: 0.93) {
+            transform: translate(200% * $x * $factor, 200% * $y * $factor);
         }
 
         &.note-C {
