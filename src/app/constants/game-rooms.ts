@@ -24,8 +24,4 @@ export const GAME_SCALES_ROOM: Room = {
     description: "Play the scale that belongs to the displayed mode.",
 } as const;
 
-export const GAME_ROOMS: Room[] = [
-    GAME_NOTES_ROOM,
-    GAME_CHORDS_ROOM,
-    GAME_SCALES_ROOM,
-];
+export const GAME_ROOMS: Room[] = [GAME_NOTES_ROOM, GAME_CHORDS_ROOM, GAME_SCALES_ROOM];

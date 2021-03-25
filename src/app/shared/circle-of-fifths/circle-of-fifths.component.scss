@@ -25,12 +25,16 @@ $sidelength: 300px;
     .center {
         border-radius: 50%;
         box-shadow: inset 0 0 3px $color-grey;
-        background: #ffffff;
+        background: #f9f9f9;
         height: 0.5 * $sidelength;
         width: 0.5 * $sidelength;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {
+            transform: scale(0.65);
+        }
     }
 }
 
