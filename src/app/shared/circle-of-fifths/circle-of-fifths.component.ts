@@ -11,46 +11,35 @@ export class CircleOfFifthsComponent implements OnInit {
     imgSource = "assets/images/notes/Ab.png";
 
     get imageSource(): string {
-        let filename: string;
-        // TODO: 25.03.2021 Use early returns
+        const folderPath = "assets/images/notes";
+        const filePath = fileName => `${folderPath}/${fileName}.png`;
+
         switch (this.displayedNote) {
             case Note.C:
-                filename = "C";
-                break;
+                return filePath("C");
             case Note.Csharp_Dflat:
-                filename = "Db";
-                break;
+                return filePath("Db");
             case Note.D:
-                filename = "D";
-                break;
+                return filePath("D");
             case Note.Dsharp_Eflat:
-                filename = "Eb";
-                break;
+                return filePath("Eb");
             case Note.E:
-                filename = "E";
-                break;
+                return filePath("E");
             case Note.F:
-                filename = "F";
-                break;
+                return filePath("F");
             case Note.Fsharp_Gflat:
-                filename = "Gb";
-                break;
+                return filePath("Gb");
             case Note.G:
-                filename = "G";
-                break;
+                return filePath("G");
             case Note.Gsharp_Aflat:
-                filename = "Ab";
-                break;
+                return filePath("Ab");
             case Note.Asharp_Bflat:
-                filename = "Bb";
-                break;
+                return filePath("Bb");
             case Note.B:
-                filename = "B";
-                break;
+                return filePath("B");
             case Note.A:
-                filename = "A";
+                return filePath("A");
         }
-        return `assets/images/notes/${filename}.png`;
     }
 
     constructor() {}
