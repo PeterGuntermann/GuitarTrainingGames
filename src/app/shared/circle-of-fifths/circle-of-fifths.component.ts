@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Note } from "../../models/note.enum";
+import { Note } from "@models/note.enum";
 
 @Component({
     selector: "app-circle-of-fifths",
