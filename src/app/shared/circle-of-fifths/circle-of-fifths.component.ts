@@ -8,7 +8,6 @@ import { Note } from "../../models/note.enum";
 })
 export class CircleOfFifthsComponent implements OnInit {
     displayedNote: Note;
-    imgSource = "assets/images/notes/Ab.png";
 
     get imageSource(): string {
         const folderPath = "assets/images/notes";
@@ -41,8 +40,6 @@ export class CircleOfFifthsComponent implements OnInit {
                 return filePath("A");
         }
     }
-
-    constructor() {}
 
     ngOnInit(): void {
         this.displayedNote = Note.Fsharp_Gflat;
