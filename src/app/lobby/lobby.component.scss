@@ -29,4 +29,25 @@ $header-height-desktop: 64px;
 
 .mat-card {
     margin: 0 1rem 1rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.room-description {
+    z-index: 2;
+    position: relative;
+}
+
+.background-image {
+    z-index: 1;
+    height: 7rem;
+    background: rgba(100, 100, 255, 0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    // https://material.angular.io/assets/img/examples/shiba2.jpg
 }
