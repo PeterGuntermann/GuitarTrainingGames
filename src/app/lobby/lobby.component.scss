@@ -36,18 +36,25 @@ $header-height-desktop: 64px;
     position: relative;
 }
 
-.room-description {
-    z-index: 2;
-    position: relative;
-}
+$images-folder-path: "../../assets/images/casino-games";
 
 .background-image {
-    z-index: 1;
     height: 7rem;
-    background: rgba(100, 100, 255, 0.7);
+    background-size: cover;
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
-    // https://material.angular.io/assets/img/examples/shiba2.jpg
+}
+
+.game-notes .background-image {
+    background-image: url("#{$images-folder-path}/roulette.png");
+}
+
+.game-chords .background-image {
+    background-image: url("#{$images-folder-path}/poker.png");
+}
+
+.game-scales .background-image {
+    background-image: url("#{$images-folder-path}/slotmachine.png");
 }

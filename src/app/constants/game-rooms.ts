@@ -1,8 +1,8 @@
-import { Room } from "../models/room.interface";
+import { Room } from "@models/room.interface";
 
 export const GAME_NOTES_ROOM: Room = {
     id: "game-notes",
-    title: "Notes",
+    title: "Note Roulette",
     subtitle: "Find the displayed notes.",
     icon: "music_note",
     description: "Find the displayed note on a specific string.",
@@ -10,7 +10,7 @@ export const GAME_NOTES_ROOM: Room = {
 
 export const GAME_CHORDS_ROOM: Room = {
     id: "game-chords",
-    title: "Chords",
+    title: "Chord Poker",
     subtitle: "Play randomly displayed chords.",
     icon: "piano",
     description: "Play the displayed chord in any form.",
@@ -18,7 +18,7 @@ export const GAME_CHORDS_ROOM: Room = {
 
 export const GAME_SCALES_ROOM: Room = {
     id: "game-scales",
-    title: "Scales",
+    title: "Scale Machine",
     subtitle: "Up and down.",
     icon: "stairs",
     description: "Play the scale that belongs to the displayed mode.",

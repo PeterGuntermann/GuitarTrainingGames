@@ -12,7 +12,11 @@
         </header>
 
         <article class="lobby-body main-wrapper">
-            <mat-card *ngFor="let room of ROOMS" [routerLink]="room.id">
+            <mat-card
+                *ngFor="let room of ROOMS"
+                [routerLink]="room.id"
+                [ngClass]="room.id"
+            >
                 <mat-card-header>
                     <div mat-card-avatar class="card-avatar">
                         <mat-icon>{{ room.icon }}</mat-icon>
@@ -25,8 +29,6 @@
 
                 <mat-card-content>
                     <div class="background-image"></div>
-
-                    <p class="room-description" [innerHTML]="room.description"></p>
                 </mat-card-content>
             </mat-card>
         </article>
