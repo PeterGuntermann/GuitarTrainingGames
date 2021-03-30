@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_SCALES_ROOM } from "../../constants/game-rooms";
+import { GAME_SCALE_MACHINE_ROOM } from "../../constants/game-rooms";
 import { GuitarString } from "../../models/guitar-string.enum";
 import { Note } from "../../models/note.enum";
 import { Scale } from "../../models/scale.enum";
@@ -12,12 +12,12 @@ interface RollResult {
 }
 
 @Component({
-    selector: "app-game-scales",
-    templateUrl: "./game-scales.component.html",
-    styleUrls: ["./game-scales.component.scss"],
+    selector: "app-game-scale-machine",
+    templateUrl: "./game-scale-machine.component.html",
+    styleUrls: ["./game-scale-machine.component.scss"],
 })
-export class GameScalesComponent implements OnInit {
-    readonly ROOM = GAME_SCALES_ROOM;
+export class GameScaleMachineComponent implements OnInit {
+    readonly ROOM = GAME_SCALE_MACHINE_ROOM;
 
     rollResult: RollResult;
 

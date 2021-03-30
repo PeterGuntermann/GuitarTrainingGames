@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { GameNotesComponent } from "./game-notes.component";
+import { GameNoteRouletteComponent } from "./game-note-roulette.component";
 
 describe("GameNotesComponent", () => {
-    let component: GameNotesComponent;
-    let fixture: ComponentFixture<GameNotesComponent>;
+    let component: GameNoteRouletteComponent;
+    let fixture: ComponentFixture<GameNoteRouletteComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [GameNotesComponent],
+            declarations: [GameNoteRouletteComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(GameNotesComponent);
+        fixture = TestBed.createComponent(GameNoteRouletteComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

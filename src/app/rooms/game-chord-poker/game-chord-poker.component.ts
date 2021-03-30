@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_CHORDS_ROOM } from "../../constants/game-rooms";
+import { GAME_CHORD_POKER_ROOM } from "../../constants/game-rooms";
 import { ChordType } from "../../models/chord-type.enum";
 import { Note } from "../../models/note.enum";
 import { RandomGeneratorService } from "../../services/random-generator.service";
@@ -10,12 +10,12 @@ interface RollResult {
 }
 
 @Component({
-    selector: "app-game-chords",
-    templateUrl: "./game-chords.component.html",
-    styleUrls: ["./game-chords.component.scss"],
+    selector: "app-game-chord-poker",
+    templateUrl: "./game-chord-poker.component.html",
+    styleUrls: ["./game-chord-poker.component.scss"],
 })
-export class GameChordsComponent implements OnInit {
-    readonly ROOM = GAME_CHORDS_ROOM;
+export class GameChordPokerComponent implements OnInit {
+    readonly ROOM = GAME_CHORD_POKER_ROOM;
 
     rollResult: RollResult;
 

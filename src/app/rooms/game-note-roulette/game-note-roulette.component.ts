@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_NOTES_ROOM } from "../../constants/game-rooms";
+import { GAME_NOTE_ROULETTE_ROOM } from "../../constants/game-rooms";
 import { GuitarString } from "../../models/guitar-string.enum";
 import { Note } from "../../models/note.enum";
 import { RandomGeneratorService } from "../../services/random-generator.service";
@@ -10,12 +10,12 @@ interface RollResult {
 }
 
 @Component({
-    selector: "app-game-notes",
-    templateUrl: "./game-notes.component.html",
-    styleUrls: ["./game-notes.component.scss"],
+    selector: "app-note-roulette",
+    templateUrl: "./game-note-roulette.component.html",
+    styleUrls: ["./game-note-roulette.component.scss"],
 })
-export class GameNotesComponent implements OnInit {
-    public readonly ROOM = GAME_NOTES_ROOM;
+export class GameNoteRouletteComponent implements OnInit {
+    public readonly ROOM = GAME_NOTE_ROULETTE_ROOM;
 
     rollResult: RollResult;
 

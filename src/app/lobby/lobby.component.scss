@@ -47,14 +47,14 @@ $images-folder-path: "../../assets/images/casino-games";
     bottom: 0;
 }
 
-.game-notes .background-image {
+.game-note-roulette .background-image {
     background-image: url("#{$images-folder-path}/roulette.png");
 }
 
-.game-chords .background-image {
+.game-chord-poker .background-image {
     background-image: url("#{$images-folder-path}/poker.png");
 }
 
-.game-scales .background-image {
+.game-scale-machine .background-image {
     background-image: url("#{$images-folder-path}/slotmachine.png");
 }

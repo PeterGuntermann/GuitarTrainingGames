@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { GameChordsComponent } from "./game-chords.component";
+import { GameChordPokerComponent } from "./game-chord-poker.component";
 
 describe("GameChordsComponent", () => {
-    let component: GameChordsComponent;
-    let fixture: ComponentFixture<GameChordsComponent>;
+    let component: GameChordPokerComponent;
+    let fixture: ComponentFixture<GameChordPokerComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [GameChordsComponent],
+            declarations: [GameChordPokerComponent],
         }).compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(GameChordsComponent);
+        fixture = TestBed.createComponent(GameChordPokerComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
