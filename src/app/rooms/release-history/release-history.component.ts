@@ -18,6 +18,13 @@ export class ReleaseHistoryComponent implements OnInit {
     ngOnInit(): void {
         this.versions = [];
         this.versions.push({
+            versionNumber: "v1.1",
+            features: [
+                "Visual upgrades in lobby",
+                "Give those games some names: Note Roulette, Chord Poker and Scale Machine",
+            ],
+        });
+        this.versions.push({
             versionNumber: "v1.0",
             features: [
                 "Three simple games based on random generators: Notes, Chords, Scales",
