@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_ROOMS } from "../constants/game-rooms";
-import { RoomSelectorService } from "../services/room-selector.service";
+import { GAME_ROOMS } from "@constants/game-rooms";
+import { RoomSelectorService } from "@services/room-selector.service";
 
 @Component({
     selector: "app-room-carousel",

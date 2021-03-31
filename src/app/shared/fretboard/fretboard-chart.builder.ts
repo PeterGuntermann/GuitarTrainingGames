@@ -1,4 +1,4 @@
-import { GuitarString } from "../../models/guitar-string.enum";
+import { GuitarString } from "@models/guitar-string.enum";
 import {
     FretboardChart,
     FretboardChartEntry,
@@ -97,9 +97,7 @@ export class FretboardChartBuilder {
 
     private setMarker(guitarString: GuitarString, fretNumber: number) {
         if (fretNumber < 1) {
-            console.warn(
-                `Ignored fretboard marker: fretNumber = ${fretNumber} < 1.`
-            );
+            console.warn(`Ignored fretboard marker: fretNumber = ${fretNumber} < 1.`);
             return;
         }
         if (fretNumber > this.numberOfFrets) {
@@ -111,8 +109,7 @@ export class FretboardChartBuilder {
 
         this.fretboardChartEntries.find(
             entry =>
-                entry.guitarString === guitarString &&
-                entry.fretNumber === fretNumber
+                entry.guitarString === guitarString && entry.fretNumber === fretNumber
         ).hasMarker = true;
     }
 }

@@ -1,4 +1,4 @@
-import { GuitarString } from "../../models/guitar-string.enum";
+import { GuitarString } from "@models/guitar-string.enum";
 
 export interface FretboardChart {
     guitarStrings: FretboardChartGuitarString[];

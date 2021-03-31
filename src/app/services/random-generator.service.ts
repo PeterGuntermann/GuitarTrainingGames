@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
-import { ChordType } from "../models/chord-type.enum";
-import { GuitarString } from "../models/guitar-string.enum";
-import { Note } from "../models/note.enum";
-import { Scale } from "../models/scale.enum";
+import { ChordType } from "@models/chord-type.enum";
+import { GuitarString } from "@models/guitar-string.enum";
+import { Note } from "@models/note.enum";
+import { Scale } from "@models/scale.enum";
 
 /**
  * The one and only service to generate anything randomly.

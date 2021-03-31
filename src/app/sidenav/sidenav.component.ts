@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_ROOMS } from "../constants/game-rooms";
-import { APP_NAME, APP_VERSION } from "../constants/globals";
+import { GAME_ROOMS } from "@constants/game-rooms";
+import { APP_NAME, APP_VERSION } from "@constants/globals";
 
 @Component({
     selector: "app-sidenav",

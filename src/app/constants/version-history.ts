@@ -1,4 +1,4 @@
-import { VersionInfo } from "../models";
+import { VersionInfo } from "@models/version-info.interface";
 
 export const VERSION_HISTORY: VersionInfo[] = [
     {

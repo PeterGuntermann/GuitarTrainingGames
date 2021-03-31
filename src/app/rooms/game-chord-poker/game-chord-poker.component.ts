@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { GAME_CHORD_POKER_ROOM } from "../../constants/game-rooms";
-import { ChordType } from "../../models/chord-type.enum";
-import { Note } from "../../models/note.enum";
-import { RandomGeneratorService } from "../../services/random-generator.service";
+import { GAME_CHORD_POKER_ROOM } from "@constants/game-rooms";
+import { ChordType } from "@models/chord-type.enum";
+import { Note } from "@models/note.enum";
+import { RandomGeneratorService } from "@services/random-generator.service";
 
 interface RollResult {
     rootNote: Note;

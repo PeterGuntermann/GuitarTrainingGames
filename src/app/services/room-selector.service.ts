@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { GAME_ROOMS } from "../constants/game-rooms";
-import { Room } from "../models/room.interface";
+import { GAME_ROOMS } from "@constants/game-rooms";
+import { Room } from "@models/room.interface";
 
 @Injectable({
     providedIn: "root",

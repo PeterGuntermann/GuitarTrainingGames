@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { APP_VERSION } from "../../constants/globals";
+import { APP_VERSION } from "@constants/globals";
 
 @Component({
     selector: "app-about-the-app",
