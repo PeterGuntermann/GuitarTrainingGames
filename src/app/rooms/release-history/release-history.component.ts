@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
-interface Version {
-    versionNumber: string;
-    features: string[];
-}
+import { VERSION_HISTORY } from "@constants/version-history";
+import { VersionInfo } from "@models/version-info.interface";
 
 @Component({
     selector: "app-release-history",
@@ -13,26 +10,9 @@ interface Version {
 export class ReleaseHistoryComponent implements OnInit {
     constructor() {}
 
-    versions: Version[];
+    versions: VersionInfo[];
 
     ngOnInit(): void {
-        this.versions = [];
-        this.versions.push({
-            versionNumber: "v1.1",
-            features: [
-                "Visual upgrades in lobby",
-                "Give those games some names: Note Roulette, Chord Poker and Scale Machine",
-            ],
-        });
-        this.versions.push({
-            versionNumber: "v1.0",
-            features: [
-                "Three simple games based on random generators: Notes, Chords, Scales",
-                "Lobby with quick navigation",
-                "Side menu with navigation",
-                "Material Design",
-                "Feedback form",
-            ],
-        });
+        this.versions = VERSION_HISTORY;
     }
 }

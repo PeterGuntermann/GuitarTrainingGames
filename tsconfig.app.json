@@ -5,7 +5,8 @@
         "types": [],
         "paths": {
             "@models/*": ["src/app/models/*"],
-            "@constants/*": ["src/app/constants/*"]
+            "@constants/*": ["src/app/constants/*"],
+            "@services/*": ["src/app/services/*"]
         }
     },
     "files": ["src/main.ts", "src/polyfills.ts"],

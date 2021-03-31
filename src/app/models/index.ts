@@ -4,3 +4,4 @@ export { Note } from "./note.enum";
 export { Scale } from "./scale.enum";
 
 export { Room } from "./room.interface";
+export { VersionInfo } from "./version-info.interface";
