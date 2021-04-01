@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
 import { GAME_NOTE_ROULETTE_ROOM } from "@constants/game-rooms";
 import { GuitarString } from "@models/guitar-string.enum";
 import { Note } from "@models/note.enum";
 import { RandomGeneratorService } from "@services/random-generator.service";
+import { HelpDialogComponent } from "../../shared/help-dialog/help-dialog.component";
 
 interface RollResult {
     rootNote: Note;
@@ -19,7 +21,10 @@ export class GameNoteRouletteComponent implements OnInit {
 
     rollResult: RollResult;
 
-    constructor(readonly randomGenerator: RandomGeneratorService) {}
+    constructor(
+        readonly randomGenerator: RandomGeneratorService,
+        readonly dialog: MatDialog
+    ) {}
 
     ngOnInit(): void {}
 
@@ -33,5 +38,6 @@ export class GameNoteRouletteComponent implements OnInit {
     onOpenHelpClick() {
         // TODO: 01.04.2021 Open dialog
         console.log("clicked!");
+        this.dialog.open(HelpDialogComponent);
     }
 }

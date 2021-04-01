@@ -6,6 +6,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { CircleOfFifthsComponent } from "./circle-of-fifths/circle-of-fifths.component";
 import { ContentBoxComponent } from "./content-box/content-box.component";
 import { FretboardComponent } from "./fretboard/fretboard.component";
+import { HelpDialogComponent } from "./help-dialog/help-dialog.component";
 import { RollButtonComponent } from "./roll-button/roll-button.component";
 import { ValueDisplayComponent } from "./value-display/value-display.component";
 
@@ -13,6 +14,7 @@ const components = [
     CircleOfFifthsComponent,
     ContentBoxComponent,
     FretboardComponent,
+    HelpDialogComponent,
     RollButtonComponent,
     ValueDisplayComponent,
 ];
