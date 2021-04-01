@@ -29,4 +29,9 @@ export class GameNoteRouletteComponent implements OnInit {
             guitarString: this.randomGenerator.randomGuitarStringForNotes(),
         };
     }
+
+    onOpenHelpClick() {
+        // TODO: 01.04.2021 Open dialog
+        console.log("clicked!");
+    }
 }

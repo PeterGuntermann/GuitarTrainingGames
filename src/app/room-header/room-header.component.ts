@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 
 @Component({
     selector: "room-header",
@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 export class RoomHeaderComponent implements OnInit {
     @Input() roomTitle: string;
+
+    @Output() openHelpClick = new EventEmitter();
 
     constructor() {}
 

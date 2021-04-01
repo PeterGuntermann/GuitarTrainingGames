@@ -5,5 +5,17 @@
 
     <span class="spacer"></span>
 
+    <!--    <span class="spacer"></span>-->
+
     <span>{{ roomTitle }}</span>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button class="open-help" (click)="openHelpClick.emit($event)">
+        <mat-icon>help_outline</mat-icon>
+    </button>
+
+    <!--    <button mat-icon-button class="open-help" (click)="($event)">-->
+    <!--        <mat-icon>more_vert</mat-icon>-->
+    <!--    </button>-->
 </mat-toolbar>
