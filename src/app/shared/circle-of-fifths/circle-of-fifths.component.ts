@@ -7,6 +7,22 @@ import { Note } from "@models/note.enum";
     styleUrls: ["./circle-of-fifths.component.scss"],
 })
 export class CircleOfFifthsComponent {
+    // counting clock-wise, starting at the top position
+    readonly noteBubbles: { className: string; note: Note }[] = [
+        { className: "note-C", note: Note.C },
+        { className: "note-G", note: Note.G },
+        { className: "note-D", note: Note.D },
+        { className: "note-A", note: Note.A },
+        { className: "note-E", note: Note.E },
+        { className: "note-B", note: Note.B },
+        { className: "note-G-flat", note: Note.Fsharp_Gflat },
+        { className: "note-D-flat", note: Note.Csharp_Dflat },
+        { className: "note-A-flat", note: Note.Gsharp_Aflat },
+        { className: "note-E-flat", note: Note.Dsharp_Eflat },
+        { className: "note-B-flat", note: Note.Asharp_Bflat },
+        { className: "note-F", note: Note.F },
+    ];
+
     @Input() displayedNote: Note;
 
     get imageSource(): string {
