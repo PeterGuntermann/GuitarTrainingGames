@@ -26,5 +26,13 @@
         ></app-value-display>
     </mat-card>
 
+    <mat-card class="note-visualization">
+        <mat-card-content>
+            <app-circle-of-fifths
+                [displayedNote]="rollResult?.rootNote"
+            ></app-circle-of-fifths>
+        </mat-card-content>
+    </mat-card>
+
     <app-roll-button (click)="roll()"></app-roll-button>
 </div>

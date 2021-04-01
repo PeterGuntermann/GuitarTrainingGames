@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Note } from "@models/note.enum";
 
 @Component({
@@ -6,8 +6,8 @@ import { Note } from "@models/note.enum";
     templateUrl: "./circle-of-fifths.component.html",
     styleUrls: ["./circle-of-fifths.component.scss"],
 })
-export class CircleOfFifthsComponent implements OnInit {
-    displayedNote: Note;
+export class CircleOfFifthsComponent {
+    @Input() displayedNote: Note;
 
     get imageSource(): string {
         const folderPath = "assets/images/notes";
@@ -39,9 +39,5 @@ export class CircleOfFifthsComponent implements OnInit {
             case Note.A:
                 return filePath("A");
         }
-    }
-
-    ngOnInit(): void {
-        this.displayedNote = Note.Fsharp_Gflat;
     }
 }
