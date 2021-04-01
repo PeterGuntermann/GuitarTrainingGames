@@ -54,10 +54,12 @@ $sidelength: 300px;
         align-items: center;
         position: absolute;
         border-radius: 50%;
+        background-color: transparent;
+        transition: background-color 0.3s, color 0.3s;
 
         &.active {
             box-shadow: 0 0 3px $color-grey;
-            background: $color-primary-500;
+            background-color: $color-primary-500;
             color: $color-white;
         }
 
