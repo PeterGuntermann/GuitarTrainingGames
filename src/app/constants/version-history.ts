@@ -6,6 +6,7 @@ export const VERSION_HISTORY: VersionInfo[] = [
         features: [
             "Visual upgrades in lobby",
             "Give those games some names: Note Roulette, Chord Poker and Scale Machine",
+            "Circle of fifths visualization for Note Roulette",
         ],
     },
     {
