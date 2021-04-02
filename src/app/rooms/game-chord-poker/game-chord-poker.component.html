@@ -1,17 +1,6 @@
-<room-header [roomTitle]="ROOM.title"></room-header>
+<room-header [roomTitle]="ROOM.title" (openHelpClick)="onOpenHelpClick()"></room-header>
 
 <div class="main-wrapper">
-    <mat-expansion-panel class="explanation">
-        <mat-expansion-panel-header>
-            <mat-panel-title> How to play? </mat-panel-title>
-        </mat-expansion-panel-header>
-        <ul>
-            <li>Click the button below to roll a random chord.</li>
-            <li>Find at least one way to play that chord.</li>
-            <li>Re-roll to get another chord.</li>
-        </ul>
-    </mat-expansion-panel>
-
     <mat-card class="roll-result">
         <app-value-display
             class="root-note"
