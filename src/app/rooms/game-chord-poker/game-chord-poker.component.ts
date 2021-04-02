@@ -7,7 +7,7 @@ import { RandomGeneratorService } from "@services/random-generator.service";
 import {
     HelpDialogComponent,
     HelpDialogData,
-} from "../../shared/help-dialog/help-dialog.component";
+} from "@shared/help-dialog/help-dialog.component";
 
 interface RollResult {
     rootNote: Note;

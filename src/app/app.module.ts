@@ -15,8 +15,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
+import { ROUTES } from "@constants/routes";
+import { SharedModule } from "@shared/shared.module";
 import { AppComponent } from "./app.component";
-import { ROUTES } from "./constants/routes";
 import { LobbyHeaderComponent } from "./lobby/lobby-header/lobby-header.component";
 import { LobbyComponent } from "./lobby/lobby.component";
 import { PlaygroundComponent } from "./playground/playground.component";
@@ -29,7 +30,6 @@ import { GameNoteRouletteComponent } from "./rooms/game-note-roulette/game-note-
 import { GameScaleMachineComponent } from "./rooms/game-scale-machine/game-scale-machine.component";
 import { ReleaseHistoryComponent } from "./rooms/release-history/release-history.component";
 import { SettingsComponent } from "./rooms/settings/settings.component";
-import { SharedModule } from "./shared/shared.module";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 
 @NgModule({
