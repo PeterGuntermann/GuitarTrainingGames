@@ -1,2 +1,9 @@
-<p>help-dialog works!</p>
-<button mat-button color="primary" (click)="onCloseClick()">close</button>
+<h2>How to play</h2>
+
+<ul>
+    <li *ngFor="let step of data.howToPlaySteps">{{ step }}</li>
+</ul>
+
+<div class="button">
+    <button mat-button color="primary" (click)="onCloseClick()">close</button>
+</div>
