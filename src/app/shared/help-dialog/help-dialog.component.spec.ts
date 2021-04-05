@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from "@angular/material/dialog";
+import { HelpDialogComponent, HelpDialogData } from "./help-dialog.component";
 
-import { HelpDialogComponent } from "./help-dialog.component";
+const HELP_DIALOG_DATA: HelpDialogData = {
+    howToPlaySteps: ["one", "two", "three"],
+};
 
 describe("HelpDialogComponent", () => {
     let component: HelpDialogComponent;
@@ -9,6 +13,11 @@ describe("HelpDialogComponent", () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [HelpDialogComponent],
+            imports: [MatDialogModule],
+            providers: [
+                { provide: MatDialogRef, useValue: {} },
+                { provide: MAT_DIALOG_DATA, useValue: HELP_DIALOG_DATA },
+            ],
         }).compileComponents();
     });
 
