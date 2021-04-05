@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-
 import { CircleOfFifthsComponent } from "./circle-of-fifths.component";
 
 describe("CircleOfFifthsComponent", () => {
