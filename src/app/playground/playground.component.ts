@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { FretboardChart } from "@shared/fretboard/fretboard-chart";
+import { FretboardChartBuilder } from "@shared/fretboard/fretboard-chart.builder";
 
 @Component({
     selector: "app-playground",
@@ -6,7 +8,18 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ["./playground.component.scss"],
 })
 export class PlaygroundComponent implements OnInit {
+    fretboardChart: FretboardChart;
+
     constructor() {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.fretboardChart = new FretboardChartBuilder()
+            .e(2)
+            .b(1)
+            .g(4)
+            .d(3)
+            .a(1)
+            .E(4)
+            .build();
+    }
 }

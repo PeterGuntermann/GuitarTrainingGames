@@ -67,6 +67,11 @@ export class FretboardChartBuilder {
         return this;
     }
 
+    active(guitarString: GuitarString) {
+        // TODO: 06.04.2021 Mark the active guitar string with color
+        return this;
+    }
+
     build() {
         const fretsForGuitarString = guitarString =>
             this.fretboardChartEntries
