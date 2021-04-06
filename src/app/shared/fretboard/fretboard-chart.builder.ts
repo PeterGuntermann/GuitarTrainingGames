@@ -7,6 +7,7 @@ import {
 
 export class FretboardChartBuilder {
     private readonly fretboardChartEntries: FretboardChartEntry[];
+    private readonly activeGuitarStrings: Set<GuitarString>;
 
     constructor(private readonly numberOfFrets = 4) {
         this.fretboardChartEntries = [
@@ -35,44 +36,45 @@ export class FretboardChartBuilder {
             new FretboardChartEntry(GuitarString.lowerE, 3, false),
             new FretboardChartEntry(GuitarString.lowerE, 4, false),
         ];
+        this.activeGuitarStrings = new Set<GuitarString>();
     }
 
-    e(fretNumber: number) {
+    e(fretNumber: number): this {
         this.setMarker(GuitarString.higherE, fretNumber);
         return this;
     }
 
-    b(fretNumber: number) {
+    b(fretNumber: number): this {
         this.setMarker(GuitarString.higherB, fretNumber);
         return this;
     }
 
-    g(fretNumber: number) {
+    g(fretNumber: number): this {
         this.setMarker(GuitarString.G, fretNumber);
         return this;
     }
 
-    d(fretNumber: number) {
+    d(fretNumber: number): this {
         this.setMarker(GuitarString.D, fretNumber);
         return this;
     }
 
-    a(fretNumber: number) {
+    a(fretNumber: number): this {
         this.setMarker(GuitarString.A, fretNumber);
         return this;
     }
 
-    E(fretNumber: number) {
+    E(fretNumber: number): this {
         this.setMarker(GuitarString.lowerE, fretNumber);
         return this;
     }
 
-    active(guitarString: GuitarString) {
-        // TODO: 06.04.2021 Mark the active guitar string with color
+    active(guitarString: GuitarString): this {
+        this.activeGuitarStrings.add(guitarString);
         return this;
     }
 
-    build() {
+    build(): FretboardChart {
         const fretsForGuitarString = guitarString =>
             this.fretboardChartEntries
                 .filter(e => e.guitarString === guitarString)
@@ -82,12 +84,13 @@ export class FretboardChartBuilder {
                         hasMarker: e.hasMarker,
                     };
                 });
-        const guitarStringObject = guitarString =>
+        const guitarStringObject = (guitarString: GuitarString) =>
             <FretboardChartGuitarString>{
                 tone: guitarString,
                 frets: fretsForGuitarString(guitarString),
+                isActive: this.activeGuitarStrings.has(guitarString),
             };
-        const fretboardChart: FretboardChart = {
+        return {
             guitarStrings: [
                 guitarStringObject(GuitarString.higherE),
                 guitarStringObject(GuitarString.higherB),
@@ -97,10 +100,9 @@ export class FretboardChartBuilder {
                 guitarStringObject(GuitarString.lowerE),
             ],
         };
-        return fretboardChart;
     }
 
-    private setMarker(guitarString: GuitarString, fretNumber: number) {
+    private setMarker(guitarString: GuitarString, fretNumber: number): void {
         if (fretNumber < 1) {
             console.warn(`Ignored fretboard marker: fretNumber = ${fretNumber} < 1.`);
             return;

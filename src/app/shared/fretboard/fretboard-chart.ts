@@ -7,6 +7,7 @@ export interface FretboardChart {
 export interface FretboardChartGuitarString {
     tone: GuitarString;
     frets: FretboardChartFret[];
+    isActive: boolean;
 }
 
 export interface FretboardChartFret {
