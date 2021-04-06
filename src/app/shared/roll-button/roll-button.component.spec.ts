@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatIconModule } from "@angular/material/icon";
 
 import { RollButtonComponent } from "./roll-button.component";
 
@@ -9,6 +10,7 @@ describe("RollButtonComponent", () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [RollButtonComponent],
+            imports: [MatIconModule],
         }).compileComponents();
     });
 

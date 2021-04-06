@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 import { LobbyHeaderComponent } from "./lobby-header.component";
 
@@ -10,6 +12,7 @@ describe("HeaderComponent", () => {
         waitForAsync(() => {
             TestBed.configureTestingModule({
                 declarations: [LobbyHeaderComponent],
+                imports: [MatIconModule, MatToolbarModule],
             }).compileComponents();
         })
     );

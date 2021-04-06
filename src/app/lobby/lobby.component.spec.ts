@@ -1,4 +1,13 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { RouterTestingModule } from "@angular/router/testing";
+import { SidenavComponent } from "../sidenav/sidenav.component";
+import { LobbyHeaderComponent } from "./lobby-header/lobby-header.component";
 
 import { LobbyComponent } from "./lobby.component";
 
@@ -8,7 +17,16 @@ describe("LayoutComponent", () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [LobbyComponent],
+            declarations: [LobbyComponent, LobbyHeaderComponent, SidenavComponent],
+            imports: [
+                MatCardModule,
+                MatIconModule,
+                MatListModule,
+                MatSidenavModule,
+                MatToolbarModule,
+                NoopAnimationsModule,
+                RouterTestingModule,
+            ],
         }).compileComponents();
     });
 
