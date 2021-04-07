@@ -22,9 +22,10 @@ $fretboard-height: 6 * $string-height; // 144px
         height: $string-height;
         margin-right: $string-padding;
         font-size: 1rem;
+        visibility: hidden;
 
-        &.hidden {
-            visibility: hidden;
+        &.isActive {
+            visibility: visible;
         }
     }
 }
@@ -61,7 +62,7 @@ $fretboard-height: 6 * $string-height; // 144px
     .exact {
         height: 2px;
         flex-shrink: 0;
-        background: #111;
+        background: $grid-color;
     }
 
     .above {
@@ -108,5 +109,12 @@ $fretboard-height: 6 * $string-height; // 144px
     .fret:last-child .above,
     .fret:last-child .below {
         border-right-width: 2px;
+    }
+
+    .guitar-string.isActive {
+        .exact {
+            box-shadow: 0 0 4px $color-primary-500;
+            background-color: $color-primary-500;
+        }
     }
 }

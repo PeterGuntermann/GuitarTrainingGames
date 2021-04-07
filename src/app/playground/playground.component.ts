@@ -15,12 +15,12 @@ export class PlaygroundComponent implements OnInit {
 
     ngOnInit(): void {
         this.fretboardChart = new FretboardChartBuilder()
-            .e(2)
-            .b(1)
-            .g(4)
-            .d(3)
-            .a(1)
-            .E(4)
+            // .e(2)
+            // .b(1)
+            // .g(4)
+            // .d(3)
+            // .a(1)
+            // .E(4)
             .active(GuitarString.G)
             .build();
     }
