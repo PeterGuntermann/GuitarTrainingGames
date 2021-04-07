@@ -22,6 +22,10 @@ $fretboard-height: 6 * $string-height; // 144px
         height: $string-height;
         margin-right: $string-padding;
         font-size: 1rem;
+
+        &.hidden {
+            visibility: hidden;
+        }
     }
 }
 

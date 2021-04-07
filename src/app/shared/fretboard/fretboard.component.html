@@ -2,6 +2,7 @@
     <span
         *ngFor="let guitarString of fretboardChart.guitarStrings"
         [innerText]="guitarStringName(guitarString.tone)"
+        [ngClass]="{ hidden: !guitarString.isActive }"
     ></span>
 </div>
 
