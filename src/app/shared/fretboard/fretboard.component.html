@@ -1,7 +1,7 @@
 <div class="guitar-string-names">
     <span
         *ngFor="let guitarString of fretboardChart.guitarStrings"
-        [innerText]="guitarString.tone"
+        [innerText]="guitarStringName(guitarString.tone)"
     ></span>
 </div>
 

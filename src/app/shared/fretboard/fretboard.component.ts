@@ -11,7 +11,7 @@ import { FretboardChartBuilder } from "./fretboard-chart.builder";
 export class FretboardComponent implements OnInit {
     @Input() fretboardChart: FretboardChart;
 
-    ngOnInit() {
+    ngOnInit(): void {
         if (this.fretboardChart) return;
         this.fretboardChart = new FretboardChartBuilder()
             .e(2)
@@ -23,5 +23,22 @@ export class FretboardComponent implements OnInit {
             .E(4)
             .active(GuitarString.G)
             .build();
+    }
+
+    guitarStringName(guitarString: GuitarString): string {
+        switch (guitarString) {
+            case GuitarString.higherE:
+                return "e'";
+            case GuitarString.higherB:
+                return "b";
+            case GuitarString.G:
+                return "g";
+            case GuitarString.D:
+                return "d";
+            case GuitarString.A:
+                return "A";
+            case GuitarString.lowerE:
+                return "E";
+        }
     }
 }

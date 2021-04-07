@@ -16,13 +16,12 @@ $fretboard-height: 6 * $string-height; // 144px
 }
 
 .guitar-string-names {
-    background: blue;
-
     span {
-        display: none;
-        //display: flex;
-        justify-content: center;
+        display: flex;
         align-items: center;
+        height: $string-height;
+        margin-right: $string-padding;
+        font-size: 1rem;
     }
 }
 
