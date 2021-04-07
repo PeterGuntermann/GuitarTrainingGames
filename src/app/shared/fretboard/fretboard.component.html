@@ -1,13 +1,19 @@
+<div class="guitar-string-names">
+    <span
+        *ngFor="let guitarString of fretboardChart.guitarStrings"
+        [innerText]="guitarString.tone"
+    ></span>
+</div>
+
+<div class="nut"></div>
+
 <div class="fretboard">
     <!--    <div class="fret-numbers">-->
     <!--        <div *ngFor="let fretNumber of fretboardLabels" class="fret">-->
     <!--            {{ fretNumber }}-->
     <!--        </div>-->
     <!--    </div>-->
-    <div
-        *ngFor="let guitarString of fretboardChart.guitarStrings"
-        class="guitar-string"
-    >
+    <div *ngFor="let guitarString of fretboardChart.guitarStrings" class="guitar-string">
         <div *ngFor="let fret of guitarString.frets" class="fret">
             <div class="above"></div>
             <div class="exact"></div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { GuitarString } from "@models/guitar-string.enum";
 import { FretboardChart } from "@shared/fretboard/fretboard-chart";
 import { FretboardChartBuilder } from "@shared/fretboard/fretboard-chart.builder";
 
@@ -20,6 +21,7 @@ export class PlaygroundComponent implements OnInit {
             .d(3)
             .a(1)
             .E(4)
+            .active(GuitarString.G)
             .build();
     }
 }

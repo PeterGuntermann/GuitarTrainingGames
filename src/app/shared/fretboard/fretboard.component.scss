@@ -2,13 +2,34 @@
 
 $grid-color: #111111;
 $circle-diameter: 12px;
+$string-thickness: 2px;
+$string-padding: 11px;
+$string-height: 2 * $string-padding + $string-thickness; // 24px
+$fretboard-height: 6 * $string-height; // 144px
 
 :host {
-    display: block;
+    display: flex;
     width: 20rem;
-    height: 150px;
+    height: $fretboard-height;
     padding: 1rem;
     margin: 0 auto;
+}
+
+.guitar-string-names {
+    background: blue;
+
+    span {
+        display: none;
+        //display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.nut {
+    background: $grid-color;
+    margin: $string-padding 0;
+    width: 3px;
 }
 
 .fretboard {
@@ -17,72 +38,72 @@ $circle-diameter: 12px;
     display: flex;
     justify-content: stretch;
     flex-direction: column;
-}
 
-.guitar-string {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: stretch;
-}
-
-.fret {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: stretch;
-    flex-direction: column;
-    position: relative;
-}
-
-.exact {
-    height: 2px;
-    flex-shrink: 0;
-    background: #111;
-}
-
-.above {
-    height: 100%;
-    border-left: 1px solid $grid-color;
-    border-right: 1px solid $grid-color;
-}
-
-.below {
-    height: 100%;
-    border-left: 1px solid $grid-color;
-    border-right: 1px solid $grid-color;
-}
-
-.marker {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .circle {
-        width: $circle-diameter;
-        height: $circle-diameter;
-        background: $grid-color;
-        border-radius: 50%;
+    .guitar-string {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: stretch;
     }
-}
 
-.guitar-string:first-child .above {
-    border: none;
-}
+    .fret {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: stretch;
+        flex-direction: column;
+        position: relative;
+    }
 
-.guitar-string:last-child .below {
-    border: none;
-}
+    .exact {
+        height: 2px;
+        flex-shrink: 0;
+        background: #111;
+    }
 
-.fret:first-child .above,
-.fret:first-child .below {
-    border-left-width: 2px;
-}
+    .above {
+        height: 100%;
+        border-left: 1px solid $grid-color;
+        border-right: 1px solid $grid-color;
+    }
 
-.fret:last-child .above,
-.fret:last-child .below {
-    border-right-width: 2px;
+    .below {
+        height: 100%;
+        border-left: 1px solid $grid-color;
+        border-right: 1px solid $grid-color;
+    }
+
+    .marker {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .circle {
+            width: $circle-diameter;
+            height: $circle-diameter;
+            background: $grid-color;
+            border-radius: 50%;
+        }
+    }
+
+    .guitar-string:first-child .above {
+        border: none;
+    }
+
+    .guitar-string:last-child .below {
+        border: none;
+    }
+
+    .fret:first-child .above,
+    .fret:first-child .below {
+        border-left-width: 2px;
+    }
+
+    .fret:last-child .above,
+    .fret:last-child .below {
+        border-right-width: 2px;
+    }
 }
