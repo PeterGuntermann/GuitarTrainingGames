@@ -9,19 +9,35 @@ import { FretboardChartBuilder } from "@shared/fretboard/fretboard-chart.builder
     styleUrls: ["./playground.component.scss"],
 })
 export class PlaygroundComponent implements OnInit {
-    fretboardChart: FretboardChart;
+    fretboardChart1: FretboardChart;
+    fretboardChart2: FretboardChart;
+    fretboardChart3: FretboardChart;
 
     constructor() {}
 
     ngOnInit(): void {
-        this.fretboardChart = new FretboardChartBuilder()
-            // .e(2)
-            // .b(1)
-            // .g(4)
-            // .d(3)
-            // .a(1)
-            // .E(4)
-            .active(GuitarString.G)
+        this.fretboardChart1 = new FretboardChartBuilder().active(GuitarString.G).build();
+
+        this.fretboardChart2 = new FretboardChartBuilder()
+            .b(2)
+            .g(3)
+            .d(3)
+            .E(2)
+            .showAllGuitarStringNames()
+            .build();
+
+        this.fretboardChart3 = new FretboardChartBuilder()
+            .showAllGuitarStringNames()
+            .E(4)
+            .E(1)
+            .a(3)
+            .d(1)
+            .d(3)
+            .g(1)
+            .b(1)
+            .b(4)
+            .e(1)
+            .e(4)
             .build();
     }
 }
