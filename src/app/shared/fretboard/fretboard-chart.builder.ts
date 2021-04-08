@@ -6,12 +6,12 @@ import {
 } from "./fretboard-chart";
 
 export class FretboardChartBuilder {
-    private readonly fretboardChartEntries: FretboardChartEntry[];
-    private readonly activeGuitarStrings: Set<GuitarString>;
+    private readonly _fretboardChartEntries: FretboardChartEntry[];
+    private readonly _activeGuitarStrings: Set<GuitarString>;
     private _showAllGuitarStringNames = false;
 
     constructor(private readonly numberOfFrets = 4) {
-        this.fretboardChartEntries = [
+        this._fretboardChartEntries = [
             new FretboardChartEntry(GuitarString.higherE, 1, false),
             new FretboardChartEntry(GuitarString.higherE, 2, false),
             new FretboardChartEntry(GuitarString.higherE, 3, false),
@@ -37,7 +37,7 @@ export class FretboardChartBuilder {
             new FretboardChartEntry(GuitarString.lowerE, 3, false),
             new FretboardChartEntry(GuitarString.lowerE, 4, false),
         ];
-        this.activeGuitarStrings = new Set<GuitarString>();
+        this._activeGuitarStrings = new Set<GuitarString>();
     }
 
     e(fretNumber: number): this {
@@ -71,7 +71,7 @@ export class FretboardChartBuilder {
     }
 
     active(guitarString: GuitarString): this {
-        this.activeGuitarStrings.add(guitarString);
+        this._activeGuitarStrings.add(guitarString);
         return this;
     }
 
@@ -82,7 +82,7 @@ export class FretboardChartBuilder {
 
     build(): FretboardChart {
         const fretsForGuitarString = guitarString =>
-            this.fretboardChartEntries
+            this._fretboardChartEntries
                 .filter(e => e.guitarString === guitarString)
                 .map(e => {
                     return {
@@ -94,7 +94,7 @@ export class FretboardChartBuilder {
             <FretboardChartGuitarString>{
                 tone: guitarString,
                 frets: fretsForGuitarString(guitarString),
-                isActive: this.activeGuitarStrings.has(guitarString),
+                isActive: this._activeGuitarStrings.has(guitarString),
             };
         return {
             guitarStrings: [
@@ -121,7 +121,7 @@ export class FretboardChartBuilder {
             return;
         }
 
-        this.fretboardChartEntries.find(
+        this._fretboardChartEntries.find(
             entry =>
                 entry.guitarString === guitarString && entry.fretNumber === fretNumber
         ).hasMarker = true;
