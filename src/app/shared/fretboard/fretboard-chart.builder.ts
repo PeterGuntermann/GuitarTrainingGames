@@ -8,6 +8,7 @@ import {
 export class FretboardChartBuilder {
     private readonly fretboardChartEntries: FretboardChartEntry[];
     private readonly activeGuitarStrings: Set<GuitarString>;
+    private _showAllGuitarStringNames = false;
 
     constructor(private readonly numberOfFrets = 4) {
         this.fretboardChartEntries = [
@@ -74,6 +75,11 @@ export class FretboardChartBuilder {
         return this;
     }
 
+    showAllGuitarStringNames(): this {
+        this._showAllGuitarStringNames = true;
+        return this;
+    }
+
     build(): FretboardChart {
         const fretsForGuitarString = guitarString =>
             this.fretboardChartEntries
@@ -99,6 +105,7 @@ export class FretboardChartBuilder {
                 guitarStringObject(GuitarString.A),
                 guitarStringObject(GuitarString.lowerE),
             ],
+            showAllGuitarStringNames: this._showAllGuitarStringNames,
         };
     }
 
