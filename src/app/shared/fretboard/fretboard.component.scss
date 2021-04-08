@@ -113,8 +113,14 @@ $fretboard-height: 6 * $string-height; // 144px
 
     .guitar-string.isActive {
         .exact {
+            height: $string-thickness + 2px;
             box-shadow: 0 0 4px $color-primary-500;
             background-color: $color-primary-500;
+        }
+
+        .above,
+        .below {
+            height: $string-padding - 1px;
         }
     }
 }
