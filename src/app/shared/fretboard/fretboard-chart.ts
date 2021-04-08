@@ -3,6 +3,7 @@ import { GuitarString } from "@models/guitar-string.enum";
 export interface FretboardChart {
     guitarStrings: FretboardChartGuitarString[];
     showAllGuitarStringNames: boolean;
+    numberOfFrets: number;
 }
 
 export interface FretboardChartGuitarString {

@@ -10,33 +10,26 @@ export class FretboardChartBuilder {
     private readonly _activeGuitarStrings: Set<GuitarString>;
     private _showAllGuitarStringNames = false;
 
-    constructor(private readonly numberOfFrets = 4) {
-        this._fretboardChartEntries = [
-            new FretboardChartEntry(GuitarString.higherE, 1, false),
-            new FretboardChartEntry(GuitarString.higherE, 2, false),
-            new FretboardChartEntry(GuitarString.higherE, 3, false),
-            new FretboardChartEntry(GuitarString.higherE, 4, false),
-            new FretboardChartEntry(GuitarString.higherB, 1, false),
-            new FretboardChartEntry(GuitarString.higherB, 2, false),
-            new FretboardChartEntry(GuitarString.higherB, 3, false),
-            new FretboardChartEntry(GuitarString.higherB, 4, false),
-            new FretboardChartEntry(GuitarString.G, 1, false),
-            new FretboardChartEntry(GuitarString.G, 2, false),
-            new FretboardChartEntry(GuitarString.G, 3, false),
-            new FretboardChartEntry(GuitarString.G, 4, false),
-            new FretboardChartEntry(GuitarString.D, 1, false),
-            new FretboardChartEntry(GuitarString.D, 2, false),
-            new FretboardChartEntry(GuitarString.D, 3, false),
-            new FretboardChartEntry(GuitarString.D, 4, false),
-            new FretboardChartEntry(GuitarString.A, 1, false),
-            new FretboardChartEntry(GuitarString.A, 2, false),
-            new FretboardChartEntry(GuitarString.A, 3, false),
-            new FretboardChartEntry(GuitarString.A, 4, false),
-            new FretboardChartEntry(GuitarString.lowerE, 1, false),
-            new FretboardChartEntry(GuitarString.lowerE, 2, false),
-            new FretboardChartEntry(GuitarString.lowerE, 3, false),
-            new FretboardChartEntry(GuitarString.lowerE, 4, false),
+    constructor(private readonly _numberOfFrets = 4) {
+        this._fretboardChartEntries = [];
+        const guitarStrings = [
+            GuitarString.higherE,
+            GuitarString.higherB,
+            GuitarString.G,
+            GuitarString.D,
+            GuitarString.A,
+            GuitarString.lowerE,
         ];
+        const fretNumbers = [...Array(_numberOfFrets).keys()].map(x => x + 1);
+
+        guitarStrings.forEach(guitarString => {
+            fretNumbers.forEach(fretNumber => {
+                this._fretboardChartEntries.push(
+                    new FretboardChartEntry(guitarString, fretNumber, false)
+                );
+            });
+        });
+
         this._activeGuitarStrings = new Set<GuitarString>();
     }
 
@@ -106,6 +99,7 @@ export class FretboardChartBuilder {
                 guitarStringObject(GuitarString.lowerE),
             ],
             showAllGuitarStringNames: this._showAllGuitarStringNames,
+            numberOfFrets: this._numberOfFrets,
         };
     }
 
@@ -114,9 +108,9 @@ export class FretboardChartBuilder {
             console.warn(`Ignored fretboard marker: fretNumber = ${fretNumber} < 1.`);
             return;
         }
-        if (fretNumber > this.numberOfFrets) {
+        if (fretNumber > this._numberOfFrets) {
             console.warn(
-                `Ignored fretboard marker: fretNumber = ${fretNumber} > ${this.numberOfFrets}.`
+                `Ignored fretboard marker: fretNumber = ${fretNumber} > ${this._numberOfFrets}.`
             );
             return;
         }

@@ -16,7 +16,9 @@ export class PlaygroundComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        this.fretboardChart1 = new FretboardChartBuilder().active(GuitarString.G).build();
+        this.fretboardChart1 = new FretboardChartBuilder(6)
+            .active(GuitarString.G)
+            .build();
 
         this.fretboardChart2 = new FretboardChartBuilder()
             .b(2)
@@ -26,17 +28,19 @@ export class PlaygroundComponent implements OnInit {
             .showAllGuitarStringNames()
             .build();
 
-        this.fretboardChart3 = new FretboardChartBuilder()
+        this.fretboardChart3 = new FretboardChartBuilder(5)
             .showAllGuitarStringNames()
+            .E(2)
             .E(4)
-            .E(1)
-            .a(3)
-            .d(1)
-            .d(3)
+            .a(2)
+            .a(4)
+            .d(2)
+            .d(4)
             .g(1)
-            .b(1)
-            .b(4)
-            .e(1)
+            .g(4)
+            .b(2)
+            .b(5)
+            .e(2)
             .e(4)
             .build();
     }
