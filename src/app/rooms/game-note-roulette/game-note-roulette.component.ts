@@ -4,6 +4,8 @@ import { GAME_NOTE_ROULETTE_ROOM } from "@constants/game-rooms";
 import { GuitarString } from "@models/guitar-string.enum";
 import { Note } from "@models/note.enum";
 import { RandomGeneratorService } from "@services/random-generator.service";
+import { FretboardChart } from "@shared/fretboard/fretboard-chart";
+import { FretboardChartBuilder } from "@shared/fretboard/fretboard-chart.builder";
 import {
     HelpDialogComponent,
     HelpDialogData,
@@ -28,6 +30,7 @@ export class GameNoteRouletteComponent implements OnInit {
     ];
 
     rollResult: RollResult;
+    fretboardChart: FretboardChart;
 
     constructor(
         readonly randomGenerator: RandomGeneratorService,
@@ -41,6 +44,9 @@ export class GameNoteRouletteComponent implements OnInit {
             rootNote: this.randomGenerator.randomNote(),
             guitarString: this.randomGenerator.randomGuitarStringForNotes(),
         };
+        this.fretboardChart = new FretboardChartBuilder()
+            .active(this.rollResult.guitarString)
+            .build();
     }
 
     onOpenHelpClick(): void {

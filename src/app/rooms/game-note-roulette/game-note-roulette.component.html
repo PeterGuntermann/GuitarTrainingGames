@@ -1,6 +1,14 @@
 <room-header [roomTitle]="ROOM.title" (openHelpClick)="onOpenHelpClick()"></room-header>
 
 <div class="main-wrapper">
+    <mat-card [style.display]="'none'">
+        <shared-fretboard
+            *ngIf="fretboardChart"
+            [fretboardChart]="fretboardChart"
+        ></shared-fretboard>
+    </mat-card>
+
+    <!--  TODO: Replace this by fretboard chart  -->
     <mat-card class="roll-result">
         <app-value-display
             class="root-note"
