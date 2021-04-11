@@ -5,6 +5,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { RouterTestingModule } from "@angular/router/testing";
 import { CircleOfFifthsComponent } from "@shared/circle-of-fifths/circle-of-fifths.component";
+import { FretboardComponent } from "@shared/fretboard/fretboard.component";
 import { RollButtonComponent } from "@shared/roll-button/roll-button.component";
 import { ValueDisplayComponent } from "@shared/value-display/value-display.component";
 import { RoomHeaderComponent } from "../../room-header/room-header.component";
@@ -22,6 +23,7 @@ describe("GameNotesComponent", () => {
                 RollButtonComponent,
                 RoomHeaderComponent,
                 ValueDisplayComponent,
+                FretboardComponent,
             ],
             imports: [
                 MatCardModule,
